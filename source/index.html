@@ -1,24 +1,29 @@
 <!DOCTYPE html>
-<html class="page" lang="ru">
+<html class="page-html" lang="ru">
 
 <head>
   <meta charset="UTF-8">
   <title>Cat Energy Pro</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <!-- favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <!-- styles -->
   <link rel="stylesheet" href="styles/styles.css">
+  <!-- scripts -->
   <script src="scripts/index.js" defer></script>
 </head>
 
-<body class="page-body">
+<body class="page-html__page-body page-body">
   <header class="page-body__page-header page-header">
     <h1 class="visually-hidden">Самый популярный кошачий корм Cat Energy Pro</h1>
-    <a class="page-header__logo logo" href="#" aria-label="Логотип Cat Energy">
-      <img class="logo__image" src="#" alt="Логотип Cat Energy" width="190" height="38">
-    </a>
-    <button class="page-header__button" type="button" aria-label="Открыть меню">Меню
-      <span class="visually-hidden">Меню</span>
-    </button>
     <nav class="page-header__navigation navigation">
+      <a class="navigation__logo logo" href="#" aria-label="Логотип Cat Energy">
+        <img class="logo__image" src="#" alt="Логотип Cat Energy" width="190" height="38">
+      </a>
+      <button class="navigation__button" type="button" aria-label="Открыть меню">Меню</button>
       <ul class="navigation__list">
         <li class="navigation__item">
           <a class="navigation__link" href="index.html" aria-label="Главная">Главная</a>
@@ -35,7 +40,22 @@
       <h2 class="visually-hidden">Cat Energy Pro Курица</h2>
       <p class="hero__heading">Функциональное питание для котов</p>
       <p class="hero__description">Занялся собой? Займись котом!</p>
-      <img class="hero__image" src="#" alt="Фотография Cat Energy Pro Курица" width="280" height="270">
+      <picture>
+        <!-- webp -->
+        <source type="image/webp" media="(min-width: 1440px)"
+          srcset="images/hero/can-desktop@1x.webp 1x, images/hero/can-desktop@2x.webp 2x" width="552" height="499">
+        <source type="image/webp" media="(min-width: 768px)"
+          srcset="images/hero/can-tablet@1x.webp 1x, images/hero/can-tablet@2x.webp 2x" width="709" height="609">
+        <source type="image/webp" srcset="images/hero/can-mobile@1x.webp 1x, images/hero/can-mobile@2x.webp 2x"
+          width="320" height="280">
+        <!-- png -->
+        <source type="image/png" media="(min-width: 1440px)"
+          srcset="images/hero/can-desktop@1x.png 1x, images/hero/can-desktop@2x.png 2x" width="552" height="499">
+        <source type="image/png" media="(min-width: 768px)"
+          srcset="images/hero/can-tablet@1x.png 1x, images/hero/can-tablet@2x.png 2x" width="709" height="609">
+        <img src="images/hero/can-mobile@1x.png" srcset="images/hero/can-mobile@2x.png" width="320" height="280"
+          alt="Фотография Cat Energy Pro Курица">
+      </picture>
       <a class="hero__button button" href="#" aria-label="Подобрать программу">Подобрать программу</a>
     </section>
   </header>
@@ -93,8 +113,38 @@
         <dd class="example__definition">затрачено времени</dd>
       </dl>
       <div class="example__slider slider">
-        <img class="slider__image" src="#" alt="Кот Борис до" width="280" height="256">
-        <img class="slider__image" src="#" alt="Кот Борис после" width="280" height="256">
+        <!-- before -->
+        <picture>
+          <!-- webp -->
+          <source type="image/webp" media="(min-width: 768px)"
+            srcset="images/example/boris-before-tablet@1x.webp 1x, images/example/boris-before-tablet@2x.webp 2x"
+            width="560" height="512">
+          <source type="image/webp"
+            srcset="images/example/boris-before-mobile@1x.webp 1x, images/example/boris-before-mobile@2x.webp 2x"
+            width="280" height="256">
+          <!-- png -->
+          <source type="image/png" media="(min-width: 768px)"
+            srcset="images/example/boris-before-tablet@1x.png 1x, images/example/boris-before-tablet@2x.png 2x"
+            width="560" height="512">
+          <img class="slider__image" src="images/example/boris-before-mobile@1x.png"
+            srcset="images/example/boris-before-mobile@2x.png" alt="Кот Борис до" width="280" height="256">
+        </picture>
+        <!-- after -->
+        <picture>
+          <!-- webp -->
+          <source type="image/webp" media="(min-width: 768px)"
+            srcset="images/example/boris-after-tablet@1x.webp 1x, images/example/boris-after-tablet@2x.webp 2x"
+            width="560" height="512">
+          <source type="image/webp"
+            srcset="images/example/boris-after-mobile@1x.webp 1x, images/example/boris-after-mobile@2x.webp 2x"
+            width="280" height="256">
+          <!-- png -->
+          <source type="image/png" media="(min-width: 768px)"
+            srcset="images/example/boris-after-tablet@1x.png 1x, images/example/boris-after-tablet@2x.png 2x"
+            width="560" height="512">
+          <img class="slider__image" src="images/example/boris-after-mobile@1x.png"
+            srcset="images/example/boris-after-mobile@2x.png" alt="Кот Борис после" width="280" height="256">
+        </picture>
         <div class="slider__control"></div>
       </div>
     </section>

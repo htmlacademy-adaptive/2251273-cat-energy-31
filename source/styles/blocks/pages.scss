@@ -1,0 +1,27 @@
+.page-html {
+  height: 100%;
+}
+
+.page-html__page-body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  width: $mobile-width;
+  margin: 0 auto;
+}
+
+.page-body__page-main {
+  flex-grow: 1;
+}
+
+@media (min-width: $tablet-width) {
+  .page-html__body {
+    width: $tablet-width;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-html__body {
+    width: $desktop-width;
+  }
+}
