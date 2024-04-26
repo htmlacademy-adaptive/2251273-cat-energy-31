@@ -1,3 +1,5 @@
+// pages
+
 .page-html {
   height: 100%;
 }
@@ -6,12 +8,8 @@
   display: flex;
   flex-direction: column;
   min-height: 100%;
-  width: $mobile-width;
+  width: 100%;
   margin: 0 auto;
-}
-
-.page-body__page-main {
-  flex-grow: 1;
 }
 
 @media (min-width: $tablet-width) {

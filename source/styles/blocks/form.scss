@@ -1,0 +1,18 @@
+// form
+
+.form {
+  display: flex;
+  flex-direction: column;
+  border: none;
+}
+
+.form__button {
+  margin: 27px 0 0;
+}
+
+.form__text {
+  @include font-family($font-family-secondary, 400, 14px, 114%);
+  margin: 20px 0 33px;
+  text-align: center;
+  color: $text-color-main;
+}

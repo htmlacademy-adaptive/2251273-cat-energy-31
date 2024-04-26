@@ -1,0 +1,77 @@
+// example
+
+.example {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  background-color: $bg-color-primary;
+}
+
+.example__heading {
+  margin: 0 0 20px;
+  font-family: $font-family-primary;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 111%;
+  color: $text-color-main;
+}
+
+.example__text {
+  margin: 0;
+  font-family: $font-family-secondary;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 129%;
+  color: $text-color-special;
+}
+
+.example__list {
+  @include list-reset;
+  display: grid;
+  gap: 32px;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0;
+}
+
+.example__item {
+  text-align: center;
+}
+
+.example__term {
+  margin: 0;
+  font-family: $font-family-primary;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 100%;
+  color: $text-color-main;
+  padding: 12px 0 17px;
+  border: 2px solid $decoration-color-secondary;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.example__definition {
+  margin: -12px 20% 0;
+  font-family: $font-family-secondary;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+  text-align: center;
+  background-color: $bg-color-primary;
+  color: $text-color-special;
+}
+
+.example__description {
+  margin: 0;
+  font-family: $font-family-primary;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 143%;
+  text-transform: uppercase;
+  text-align: center;
+  color: $text-color-main;
+}
+
+.example__slider {
+  margin: 0 auto;
+}

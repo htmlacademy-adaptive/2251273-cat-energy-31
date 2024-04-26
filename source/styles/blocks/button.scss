@@ -1,0 +1,43 @@
+// button
+
+.button {
+  font-family: $font-family-primary;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 125%;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: $bg-color-secondary;
+  color: $text-color-secondary;
+  text-decoration: none;
+  padding: 10px;
+  border: none;
+}
+
+.button--base {
+  font-size: 20px;
+  line-height: 130%;
+  padding: 15px;
+}
+
+.button--secondary {
+  background-color: $bg-color-primary;
+  color: $text-color-special;
+}
+
+.button:hover {
+  background-color: $bg-color-hover;
+}
+
+.button:active {
+  color: rgba($color: $text-color-secondary, $alpha: 0.3);
+}
+
+.button--secondary:hover {
+  background-color: $bg-color-special-hover;
+}
+
+.button--secondary:active {
+  background-color: $bg-color-special-hover;
+  color: rgba($color: $text-color-special, $alpha: 0.3);
+}

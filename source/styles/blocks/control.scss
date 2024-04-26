@@ -1,0 +1,56 @@
+// control
+
+.control {
+  display: flex;
+  gap: 13px;
+}
+
+.control__input {
+  @include font-family($font-family-primary, 400, 16px);
+  box-sizing: border-box;
+  flex-grow: 1;
+  width: 50%;
+  text-transform: uppercase;
+  color: $text-color-special;
+  margin: 0;
+  padding: 9px 14px;
+  border: 2px solid $decoration-color-primary;
+}
+
+.control__input--medium {
+  @include font-family($font-family-primary, 400, 20px);
+}
+
+.control__mark {
+  width: 28px;
+  height: 28px;
+  border: 2px solid $decoration-color-primary;
+  flex-shrink: 0;
+}
+
+.control__mark--radio {
+  border-radius: 50%;
+}
+
+.control__input:checked + .control__mark--radio {
+  background-color: $bg-color-secondary;
+}
+
+.control__input:checked + .control__mark--checkbox {
+  background-color: $bg-color-secondary;
+}
+
+.control__name {
+  @include font-family($font-family-primary, 400, 16px, 112%);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  text-transform: uppercase;
+  color: $text-color-special;
+}
+
+.control--comment {
+  @include font-family($font-family-primary, 400, 16px, 112%);
+  padding: 19px 12px;
+  text-transform: uppercase;
+}

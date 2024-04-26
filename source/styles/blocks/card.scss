@@ -1,0 +1,83 @@
+// card
+
+.card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 17px 0;
+}
+
+.card--all {
+  grid-template-columns: 1fr;
+  justify-items: stretch;
+  gap: 21px;
+}
+
+.card__link {
+  display: flex;
+  text-decoration: none;
+}
+
+.card__link--all {
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+}
+
+.card__link--image {
+  grid-column: 1/2;
+  grid-row: 1/3;
+  justify-content: center;
+  align-items: center;
+}
+
+.card__image {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.card__title {
+  width: 70%;
+  margin: 0;
+  font-family: $font-family-primary;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 125%;
+  text-transform: uppercase;
+  color: $text-color-normal;
+}
+
+.card__title--all {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 26px;
+}
+
+.card__title--all::before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: $decoration-color-primary;
+}
+
+.card__button {
+  grid-column: 1/-1;
+  margin: 0;
+}
+
+.card__button--all {
+  margin: 0;
+}
+
+.card__text {
+  margin: 0;
+  font-family: $font-family-secondary;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 133%;
+  text-align: center;
+  color: $text-color-special;
+}

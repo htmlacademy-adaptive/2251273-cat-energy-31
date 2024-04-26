@@ -1,0 +1,47 @@
+// page-main
+
+.page-main__programs {
+  padding: 20px;
+}
+
+.page-main__functional {
+  padding: 3px 20px 50px;
+}
+
+.page-main__example {
+  padding: 25px 20px 40px;
+}
+
+.page-main__catalog {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.page-main__other {
+  padding: 25px 20px 0;
+}
+
+.page-main__subscription {
+  padding: 40px 20px;
+}
+
+.page-main__heading {
+  @include font-family($font-family-primary, 400, 36px, 100%);
+  margin: 0;
+  padding: 27px 20px 37px;
+  color: $text-color-main;
+}
+
+.page-main__description {
+  @include font-family($font-family-primary, 400, 14px, 129%);
+  margin: 0;
+  padding: 0 72px 19px 20px;
+  text-transform: uppercase;
+  color: $text-color-main;
+}
+
+.page-main__form {
+  padding: 20px;
+}

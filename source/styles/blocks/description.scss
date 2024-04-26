@@ -1,0 +1,16 @@
+// description
+
+.description {
+  @include list-reset;
+  font-family: $font-family-secondary;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 133%;
+  text-align: center;
+  color: $text-color-special;
+}
+
+.description__item {
+  display: flex;
+  justify-content: space-between;
+}

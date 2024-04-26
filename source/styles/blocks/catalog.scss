@@ -1,0 +1,23 @@
+// catalog
+
+.catalog__heading {
+  font-family: $font-family-primary;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 100%;
+  color: $text-color-main;
+  margin: 0;
+  padding: 27px 20px 40px;
+}
+
+.catalog__list {
+  @include list-reset;
+  display: grid;
+  grid-template-columns: 1fr;
+  border-bottom: 2px solid $decoration-color-main;
+}
+
+.catalog__item {
+  padding: 23px 20px;
+  border-top: 1px solid $decoration-color-main;
+}

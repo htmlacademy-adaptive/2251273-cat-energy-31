@@ -6,6 +6,7 @@
   <title>Cat Energy Pro</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <!-- favicon -->
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
@@ -19,12 +20,24 @@
 <body class="page-html__page-body page-body">
   <header class="page-body__page-header page-header">
     <h1 class="visually-hidden">Самый популярный кошачий корм Cat Energy Pro</h1>
-    <nav class="page-header__navigation navigation">
-      <a class="navigation__logo logo" href="#" aria-label="Логотип Cat Energy">
-        <img class="logo__image" src="#" alt="Логотип Cat Energy" width="190" height="38">
+    <div class="page-header__wrapper">
+      <a class="page-header__logo page-logo" href="index.html" aria-label="Логотип Cat Energy">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="images/logo/page-logo-desktop.svg" width="202" height="59"
+            type="image/svg+xml">
+          <source media="(min-width: 768px)" srcset="images/logo/page-logo-tablet.svg" width="174" height="50"
+            type="image/svg+xml">
+          <img class="page-logo__image" src="images/logo/page-logo-mobile.svg" alt="Логотип Cat Energy" width="190"
+            height="38">
+        </picture>
       </a>
-      <button class="navigation__button" type="button" aria-label="Открыть меню">Меню</button>
-      <ul class="navigation__list">
+      <button class="page-header__button page-header__button--no-js page-header__button--js" type="button"
+        aria-label="Открыть меню"></button>
+    </div>
+    <nav class="page-header__navigation navigation">
+      <!-- no-js защита работы без JS -->
+      <!-- closed закрытое меню -->
+      <ul class="navigation__list navigation__list--closed navigation__list--no-js">
         <li class="navigation__item">
           <a class="navigation__link" href="index.html" aria-label="Главная">Главная</a>
         </li>
@@ -36,10 +49,14 @@
         </li>
       </ul>
     </nav>
-    <section class="page-header__hero hero">
+  </header>
+  <main class="page-body__page-main page-main">
+    <section class="page-main__hero hero">
       <h2 class="visually-hidden">Cat Energy Pro Курица</h2>
-      <p class="hero__heading">Функциональное питание для котов</p>
-      <p class="hero__description">Занялся собой? Займись котом!</p>
+      <div class="hero__wrapper">
+        <p class="hero__heading">Функциональное питание для котов</p>
+        <p class="hero__description">Занялся собой? Займись котом!</p>
+      </div>
       <picture>
         <!-- webp -->
         <source type="image/webp" media="(min-width: 1440px)"
@@ -53,25 +70,21 @@
           srcset="images/hero/can-desktop@1x.png 1x, images/hero/can-desktop@2x.png 2x" width="552" height="499">
         <source type="image/png" media="(min-width: 768px)"
           srcset="images/hero/can-tablet@1x.png 1x, images/hero/can-tablet@2x.png 2x" width="709" height="609">
-        <img src="images/hero/can-mobile@1x.png" srcset="images/hero/can-mobile@2x.png" width="320" height="280"
-          alt="Фотография Cat Energy Pro Курица">
+        <img class="hero__image" src="images/hero/can-mobile@1x.png" srcset="images/hero/can-mobile@2x.png" width="280"
+          height="270" alt="Фотография Cat Energy Pro Курица">
       </picture>
-      <a class="hero__button button" href="#" aria-label="Подобрать программу">Подобрать программу</a>
+      <a class="hero__button button" href="form.html" aria-label="Подобрать программу">Подобрать программу</a>
     </section>
-  </header>
-  <main class="page-body__page-main page-main">
     <section class="page-main__programs programs">
       <h2 class="visually-hidden">Наши программы</h2>
       <ul class="programs__list">
         <li class="programs__item">
-          <img class="programs__image" src="#" alt="Логотип программы похудения" width="67" height="50">
           <h3 class="programs__title">Похудение</h3>
           <p class="programs__text">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на
             диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
           <a class="programs__link" href="#" aria-label="Каталог slim">Каталог slim</a>
         </li>
         <li class="programs__item">
-          <img class="programs__image" src="#" alt="Логотип программы набора массы" width="50" height="53">
           <h3 class="programs__title">Набор массы</h3>
           <p class="programs__text">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет
             вашему коту нарастить необходимые мышцы!</p>
@@ -84,19 +97,15 @@
       <p class="functional__heading">Как это работает</p>
       <ol class="functional__list">
         <li class="functional__item">
-          <img class="functional__image" src="#" alt="Логотип ..." width="60" height="60">
           <h3 class="functional__text">Функциональное питание содержит только полезные питательные вещества.</h3>
         </li>
         <li class="functional__item">
-          <img class="functional__image" src="#" alt="Логотип ..." width="60" height="60">
           <h3 class="functional__text">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</h3>
         </li>
         <li class="functional__item">
-          <img class="functional__image" src="#" alt="Логотип ..." width="60" height="60">
           <h3 class="functional__text">Замените один-два приема обычной еды на наше функциональное питание.</h3>
         </li>
         <li class="functional__item">
-          <img class="functional__image" src="#" alt="Логотип ..." width="60" height="60">
           <h3 class="functional__text">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</h3>
         </li>
       </ol>
@@ -106,73 +115,83 @@
       <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
         Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов
         в день.</p>
-      <dl class="example__list">
-        <dt class="example__term">5 кг</dt>
-        <dd class="example__definition">за 2 месяца</dd>
-        <dt class="example__term">60 дней</dt>
-        <dd class="example__definition">затрачено времени</dd>
-      </dl>
+      <ul class="example__list">
+        <li class="example__item">
+          <p class="example__term">5 кг</p>
+          <p class="example__definition">снижение веса</p>
+        </li>
+        <li class="example__item">
+          <p class="example__term">60 дней</p>
+          <p class="example__definition">затрачено времени</p>
+        </li>
+      </ul>
+      <p class="example__description">Затраты на питание: 15 000 РУБ.</p>
       <div class="example__slider slider">
-        <!-- before -->
-        <picture>
-          <!-- webp -->
-          <source type="image/webp" media="(min-width: 768px)"
-            srcset="images/example/boris-before-tablet@1x.webp 1x, images/example/boris-before-tablet@2x.webp 2x"
-            width="560" height="512">
-          <source type="image/webp"
-            srcset="images/example/boris-before-mobile@1x.webp 1x, images/example/boris-before-mobile@2x.webp 2x"
-            width="280" height="256">
-          <!-- png -->
-          <source type="image/png" media="(min-width: 768px)"
-            srcset="images/example/boris-before-tablet@1x.png 1x, images/example/boris-before-tablet@2x.png 2x"
-            width="560" height="512">
-          <img class="slider__image" src="images/example/boris-before-mobile@1x.png"
-            srcset="images/example/boris-before-mobile@2x.png" alt="Кот Борис до" width="280" height="256">
-        </picture>
-        <!-- after -->
-        <picture>
-          <!-- webp -->
-          <source type="image/webp" media="(min-width: 768px)"
-            srcset="images/example/boris-after-tablet@1x.webp 1x, images/example/boris-after-tablet@2x.webp 2x"
-            width="560" height="512">
-          <source type="image/webp"
-            srcset="images/example/boris-after-mobile@1x.webp 1x, images/example/boris-after-mobile@2x.webp 2x"
-            width="280" height="256">
-          <!-- png -->
-          <source type="image/png" media="(min-width: 768px)"
-            srcset="images/example/boris-after-tablet@1x.png 1x, images/example/boris-after-tablet@2x.png 2x"
-            width="560" height="512">
-          <img class="slider__image" src="images/example/boris-after-mobile@1x.png"
-            srcset="images/example/boris-after-mobile@2x.png" alt="Кот Борис после" width="280" height="256">
-        </picture>
+        <div class="slider__wrapper slider__wrapper-before">
+          <picture>
+            <!-- webp -->
+            <source type="image/webp" media="(min-width: 768px)"
+              srcset="images/example/boris-before-tablet@1x.webp 1x, images/example/boris-before-tablet@2x.webp 2x"
+              width="560" height="512">
+            <source type="image/webp"
+              srcset="images/example/boris-before-mobile@1x.webp 1x, images/example/boris-before-mobile@2x.webp 2x"
+              width="280" height="256">
+            <!-- png -->
+            <source type="image/png" media="(min-width: 768px)"
+              srcset="images/example/boris-before-tablet@1x.png 1x, images/example/boris-before-tablet@2x.png 2x"
+              width="560" height="512">
+            <img class="slider__image" src="images/example/boris-before-mobile@1x.png"
+              srcset="images/example/boris-before-mobile@2x.png" alt="Кот Борис до" width="280" height="256">
+          </picture>
+        </div>
+        <div class="slider__wrapper slider__wrapper-after">
+          <picture>
+            <!-- webp -->
+            <source type="image/webp" media="(min-width: 768px)"
+              srcset="images/example/boris-after-tablet@1x.webp 1x, images/example/boris-after-tablet@2x.webp 2x"
+              width="560" height="512">
+            <source type="image/webp"
+              srcset="images/example/boris-after-mobile@1x.webp 1x, images/example/boris-after-mobile@2x.webp 2x"
+              width="280" height="256">
+            <!-- png -->
+            <source type="image/png" media="(min-width: 768px)"
+              srcset="images/example/boris-after-tablet@1x.png 1x, images/example/boris-after-tablet@2x.png 2x"
+              width="560" height="512">
+            <img class="slider__image" src="images/example/boris-after-mobile@1x.png"
+              srcset="images/example/boris-after-mobile@2x.png" alt="Кот Борис после" width="280" height="256">
+          </picture>
+        </div>
         <div class="slider__control"></div>
       </div>
     </section>
     <section class="page-main__invite invite">
       <h2 class="visually-hidden">Наш адрес в Санкт-Петербурге</h2>
-      <p class="invite__heading">Приглашаем к сотрудничеству дилеров!</p>
-      <h3 class="invite__text">ул. Б. Конюшенная, д. 19/8 Санкт-Петербург</h3>
+      <div class="invite__wrapper">
+        <p class="invite__heading">Приглашаем<br>к сотрудничеству<br>дилеров!</p>
+        <h3 class="invite__text">ул. Большая<br>Конюшенная, д. 19/8<br>Санкт-Петербург</h3>
+      </div>
       <iframe class="invite__map map" src="https://yandex.ru/map-widget/v1/-/CDRPbIpb"></iframe>
     </section>
   </main>
   <footer class="page-body__page-footer page-footer">
     <a class="page-footer__logo logo" href="#" aria-label="Логотип Cat Energy">
-      <img class="logo__image" src="#" alt="Логотип Cat Energy" width="128" height="24">
-    </a>-
+      <img class="logo__image" src="images/logo/footer-logo.svg" alt="Логотип Cat Energy" width="128" height="24">
+    </a>
     <ul class="page-footer__social social">
       <li class="social__item">
-        <a class="social__link" href="#" aria-label="VK">VK</a>
+        <a class="social__link" href="#" aria-label="VK"></a>
       </li>
       <li class="social__item">
-        <a class="social__link" href="#" aria-label="YouTube">YouTube</a>
+        <a class="social__link" href="#" aria-label="YouTube"></a>
       </li>
       <li class="social__item">
-        <a class="social__link" href="#" aria-label="Telegram">Telegram</a>
+        <a class="social__link" href="#" aria-label="Telegram"></a>
       </li>
     </ul>
     <a class="page-footer__htmlacademy htmlacademy" href="#" aria-label="HTML Academy">
       <p class="htmlacademy__text">HTML Academy</p>
-      <img class="htmlacademy__image" src="#" alt="Логотип HTML Academy" width="27" height="34">
+      <img class="htmlacademy__image" src="images/logo/html-academy.svg" alt="Логотип HTML Academy" width="27"
+        height="34">
     </a>
   </footer>
 </body>

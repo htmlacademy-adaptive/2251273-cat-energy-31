@@ -1,0 +1,46 @@
+// slider
+
+.slider {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: 280px;
+  height: 256px;
+}
+
+.slider__wrapper {
+  overflow: hidden;
+}
+
+.slider__wrapper-before {
+  width: 50%;
+}
+
+.slider__wrapper-after {
+  width: 50%;
+  display: flex;
+  justify-content: end;
+}
+
+.slider__control {
+  position: absolute;
+  width: 4px;
+  height: 100%;
+  background-color: $bg-color-special;
+  border-radius: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.slider__control::before {
+  content: "";
+  width: 40px;
+  height: 40px;
+  background-color: $bg-color-main;
+  border: 2px solid $decoration-color-secondary;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

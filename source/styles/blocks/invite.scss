@@ -1,0 +1,40 @@
+// invite
+
+.invite {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.invite--second {
+  background-color: $bg-color-primary;
+}
+
+.invite__wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 26px 20px;
+}
+
+.invite__heading {
+  margin: 0;
+  font-family: $font-family-primary;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 125%;
+  text-transform: uppercase;
+  color: $text-color-main;
+}
+
+.invite__text {
+  margin: 0;
+  font-family: $font-family-secondary;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 143%;
+  color: $text-color-special;
+}
+
+.invite__map {
+  width: 100%;
+  min-height: 362px;
+}

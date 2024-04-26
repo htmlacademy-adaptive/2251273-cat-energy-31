@@ -1,0 +1,42 @@
+// functional
+
+.functional {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 20px;
+}
+
+.functional__heading {
+  margin: 0 0 20px;
+  font-family: $font-family-primary;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 111%;
+  color: $text-color-main;
+}
+
+.functional__list {
+  @include list-reset;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.functional__text {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 20px;
+  margin: 0;
+  font-family: $font-family-secondary;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 129%;
+  color: $text-color-special;
+}
+
+.functional__text::before {
+  content: "";
+  width: 60px;
+  height: 60px;
+  background-color: $bg-color-secondary;
+}
