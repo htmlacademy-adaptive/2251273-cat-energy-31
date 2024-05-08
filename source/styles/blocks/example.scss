@@ -3,25 +3,19 @@
 .example {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 20px;
-  background-color: $bg-color-primary;
+  gap: 19px;
+  background-color: $bg-color-auxiliary;
 }
 
 .example__heading {
+  @include font-family($font-family-primary, 400, 36px, 111%);
   margin: 0 0 20px;
-  font-family: $font-family-primary;
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 111%;
   color: $text-color-main;
 }
 
 .example__text {
+  @include font-family($font-family-secondary, 400, 14px, 129%);
   margin: 0;
-  font-family: $font-family-secondary;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 129%;
   color: $text-color-special;
 }
 
@@ -38,40 +32,99 @@
 }
 
 .example__term {
+  @include font-family($font-family-primary, 400, 24px, 100%);
   margin: 0;
-  font-family: $font-family-primary;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 100%;
-  color: $text-color-main;
-  padding: 12px 0 17px;
-  border: 2px solid $decoration-color-secondary;
-  border-radius: 4px;
+  padding: 13px 0 18px;
   text-transform: uppercase;
+  border: 1px solid $decoration-color-secondary;
+  color: $text-color-main;
 }
 
 .example__definition {
-  margin: -12px 20% 0;
-  font-family: $font-family-secondary;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 100%;
+  @include font-family($font-family-secondary, 400, 12px, 100%);
+  margin: -10px 20% 0;
+  background-color: $bg-color-auxiliary;
   text-align: center;
-  background-color: $bg-color-primary;
   color: $text-color-special;
 }
 
 .example__description {
+  @include font-family($font-family-primary, 400, 14px, 143%);
   margin: 0;
-  font-family: $font-family-primary;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 143%;
   text-transform: uppercase;
   text-align: center;
   color: $text-color-main;
 }
 
+.example__description-wrapping {
+  display: none;
+}
+
 .example__slider {
   margin: 0 auto;
+}
+
+// tablet
+
+@media (min-width: $tablet-width) {
+  .example {
+    grid-template-columns: 5.1fr 4fr;
+    gap: 55px;
+    background-color: $bg-color-main;
+    border-top: 1px solid $decoration-color-main;
+  }
+
+  .example::after {
+    content: "";
+    grid-column: 1 / -1;
+    width: calc(100% + 60px);
+    height: 462px;
+    background-color: $decoration-color-main;
+    margin: -417px -30px 0;
+  }
+
+  .example__heading {
+    @include font-family($font-family-primary, 400, 60px, 100%);
+    grid-column: 1 / -1;
+    margin: 0 0 5px;
+    color: $text-color-main;
+  }
+
+  .example__text {
+    @include font-family($font-family-secondary, 400, 16px, 150%);
+    grid-column: 1 / -1;
+  }
+
+  .example__list {
+    gap: 43px;
+  }
+
+  .example__term {
+    @include font-family($font-family-primary, 400, 30px, 125%);
+    padding: 14px 0 17px;
+  }
+
+  .example__definition {
+    @include font-family($font-family-secondary, 400, 14px, 100%);
+    margin: -8px 8% 0;
+    background-color: $bg-color-main;
+  }
+
+  .example__description {
+    @include font-family($font-family-primary, 400, 20px, 150%);
+    max-width: 80%;
+    justify-self: end;
+    padding: 6px 0 0;
+    letter-spacing: 0.1px;
+    text-align: right;
+  }
+
+  .example__slider {
+    grid-column: 1 / -1;
+    margin: 44px auto 0;
+  }
+
+  .example__description-wrapping {
+    display: block;
+  }
 }

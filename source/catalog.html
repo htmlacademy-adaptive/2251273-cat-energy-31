@@ -10,7 +10,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
+  <link rel="manifest" href="site.webmanifest">
   <!-- styles -->
   <link rel="stylesheet" href="styles/styles.css">
   <!-- scripts -->
@@ -21,17 +21,18 @@
   <header class="page-body__page-header page-header">
     <h1 class="visually-hidden">Самый популярный кошачий корм Cat Energy Pro</h1>
     <div class="page-header__wrapper">
-      <a class="page-header__logo page-logo" href="#" aria-label="Логотип Cat Energy">
+      <a class="page-header__logo logo logo--header" href="index.html" aria-label="Логотип Cat Energy">
         <picture>
-          <source media="(min-width: 1440px)" srcset="images/logo/page-logo-desktop.svg" width="202" height="59"
+          <source media="(min-width: 1440px)" srcset="images/logo/logo-header-desktop.svg" width="202" height="59"
             type="image/svg+xml">
-          <source media="(min-width: 768px)" srcset="images/logo/page-logo-tablet.svg" width="174" height="50"
+          <source media="(min-width: 768px)" srcset="images/logo/logo-header-tablet.svg" width="174" height="50"
             type="image/svg+xml">
-          <img class="page-logo__image" src="images/logo/page-logo-mobile.svg" alt="Логотип Cat Energy" width="190"
+          <img class="logo__icon" src="images/logo/logo-header-mobile.svg" alt="Логотип Cat Energy" width="190"
             height="38">
         </picture>
       </a>
-      <button class="page-header__button" type="button" aria-label="Открыть меню"></button>
+      <button class="page-header__button page-header__button--no-js page-header__button--js" type="button"
+        aria-label="Открыть меню"></button>
     </div>
     <nav class="page-header__navigation navigation">
       <!-- no-js защита работы без JS -->
@@ -41,7 +42,7 @@
           <a class="navigation__link" href="index.html" aria-label="Главная">Главная</a>
         </li>
         <li class="navigation__item">
-          <a class="navigation__link" href="catalog.html" aria-label="Каталог">Каталог продукции</a>
+          <a class="navigation__link navigation__link--current" href="catalog.html" aria-label="Каталог">Каталог продукции</a>
         </li>
         <li class="navigation__item">
           <a class="navigation__link" href="form.html" aria-label="Подбор программы">Подбор программы</a>
@@ -73,7 +74,7 @@
             </picture>
           </a>
           <a class="card__link card__link--title" href="#">
-            <p class="card__title">Cat Energy PRO 500 г</p>
+            <p class="card__title">Cat Energy PRO <br class="card__title-wrapping">500 г</p>
           </a>
           <h3 class="visually-hidden">Cat Energy PRO 500 г курица</h3>
           <ul class="card__description description">
@@ -112,7 +113,7 @@
             </picture>
           </a>
           <a class="card__link card__link--title" href="#">
-            <p class="card__title">Cat Energy PRO 1000 г</p>
+            <p class="card__title">Cat Energy PRO <br class="card__title-wrapping">1000 г</p>
           </a>
           <h3 class="visually-hidden">Cat Energy PRO 1000 г курица</h3>
           <ul class="card__description description">
@@ -151,7 +152,7 @@
             </picture>
           </a>
           <a class="card__link card__link--title" href="#">
-            <p class="card__title">Cat Energy PRO 500 г</p>
+            <p class="card__title">Cat Energy PRO <br class="card__title-wrapping">500 г</p>
           </a>
           <h3 class="visually-hidden">Cat Energy PRO 500 г рыба</h3>
           <ul class="card__description description">
@@ -190,7 +191,7 @@
             </picture>
           </a>
           <a class="card__link card__link--title" href="#">
-            <p class="card__title">Cat Energy PRO 1000 г</p>
+            <p class="card__title">Cat Energy PRO <br class="card__title-wrapping">1000 г</p>
           </a>
           <h3 class="visually-hidden">Cat Energy PRO 1000 г рыба</h3>
           <ul class="card__description description">
@@ -229,9 +230,9 @@
             </picture>
           </a>
           <a class="card__link card__link--title" href="#">
-            <p class="card__title">Cat Energy SLIM 500 г</p>
+            <p class="card__title">Cat Energy SLIM <br class="card__title-wrapping">500 г</p>
           </a>
-          <h3 class="visually-hidden">Cat Energy SLIM 500 г гречка</h3>
+          <h3 class="visually-hidden">Cat Energy SLIM 500г гречка</h3>
           <ul class="card__description description">
             <li class="description__item">
               <span class="description__term">Масса</span>
@@ -268,7 +269,7 @@
             </picture>
           </a>
           <a class="card__link card__link--title" href="#">
-            <p class="card__title">Cat Energy SLIM 1000 г</p>
+            <p class="card__title">Cat Energy SLIM <br class="card__title-wrapping">1000 г</p>
           </a>
           <h3 class="visually-hidden">Cat Energy SLIM 1000 г гречка</h3>
           <ul class="card__description description">
@@ -307,7 +308,7 @@
             </picture>
           </a>
           <a class="card__link card__link--title" href="#">
-            <p class="card__title">Cat Energy SLIM 500 г</p>
+            <p class="card__title">Cat Energy SLIM <br class="card__title-wrapping">500 г</p>
           </a>
           <h3 class="visually-hidden">Cat Energy SLIM 500 г рис</h3>
           <ul class="card__description description">
@@ -326,7 +327,7 @@
           </ul>
           <button class="card__button button " type="button" aria-label="Заказать">Заказать</button>
         </li>
-        <li class="catalog__item card card--all">
+        <li class="catalog__item catalog__item--all card card--all">
           <a class="card__link card__link--all" href="#">
             <h3 class="card__title card__title--all">Показать еще 100500 товаров</h3>
             <p class="card__text">На самом деле вкусов гораздо больше!</p>
@@ -373,10 +374,9 @@
       <p class="subscription__text">Подпишитесь на наши новости и не пропустите ни одного предложения!</p>
       <form class="subscription__form form" action="https://echo.htmlacademy.ru/" method="post">
         <label class="form__control control" for="owner-email">
-          <input class="control__input control__input--medium control__input--text" type="email" name="owner-email"
+          <input class="control__input control__input--medium" type="email" name="owner-email"
             id="owner-email" placeholder="kuklachev@gmail.com" aria-label="E-mail" required>
         </label>
-
         <button class="form__button button button--base" type="submit">Подписаться</button>
       </form>
     </section>
@@ -390,24 +390,39 @@
     </section>
   </main>
   <footer class="page-body__page-footer page-footer">
-    <a class="page-footer__logo logo" href="#" aria-label="Логотип Cat Energy">
-      <img class="logo__image" src="images/logo/footer-logo.svg" alt="Логотип Cat Energy" width="128" height="24">
+    <a class="page-footer__logo logo logo--footer" href="#" aria-label="Логотип Cat Energy">
+      <svg class="logo__icon" width="128" height="25">
+        <use href="icons/stack.svg#footer-logo"></use>
+      </svg>
     </a>
     <ul class="page-footer__social social">
       <li class="social__item">
-        <a class="social__link" href="#" aria-label="VK"></a>
+        <a class="social__link" href="#" aria-label="VK">
+          <svg class="social__icon" width="28" height="22">
+            <use href="icons/stack.svg#social_vkontakte"></use>
+          </svg>
+        </a>
       </li>
       <li class="social__item">
-        <a class="social__link" href="#" aria-label="YouTube"></a>
+        <a class="social__link" href="#" aria-label="YouTube">
+          <svg class="social__icon" width="28" height="22">
+            <use href="icons/stack.svg#social_youtube"></use>
+          </svg>
+        </a>
       </li>
       <li class="social__item">
-        <a class="social__link" href="#" aria-label="Telegram"></a>
+        <a class="social__link" href="#" aria-label="Telegram">
+          <svg class="social__icon" width="28" height="22">
+            <use href="icons/stack.svg#social_telegram"></use>
+          </svg>
+        </a>
       </li>
     </ul>
-    <a class="page-footer__htmlacademy htmlacademy" href="#" aria-label="HTML Academy">
+    <a class="page-footer__htmlacademy htmlacademy" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy">
       <p class="htmlacademy__text">HTML Academy</p>
-      <img class="htmlacademy__image" src="images/logo/html-academy.svg" alt="Логотип HTML Academy" width="27"
-        height="34">
+      <svg class="htmlacademy__icon" width="27" height="34">
+        <use href="icons/stack.svg#html-academy"></use>
+      </svg>
     </a>
   </footer>
 </body>

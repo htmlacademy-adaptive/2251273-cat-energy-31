@@ -1,0 +1,46 @@
+// logo
+
+.logo--header {
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:focus-visible {
+    opacity: 0.6;
+    outline: 2px solid $bg-color-secondary;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.logo--footer {
+  place-self: center center;
+  color: $logo-color;
+
+  &:hover {
+    color: $logo-color-hover;
+  }
+
+  &:focus-visible {
+    color: $logo-color-hover;
+    outline: 2px solid $bg-color-secondary;
+  }
+
+  &:active {
+    color: $logo-color-active;
+  }
+}
+
+.logo__icon {
+  display: flex;
+}
+
+// tablet
+
+@media (min-width: $tablet-width) {
+  .logo--footer {
+    place-self: center start;
+  }
+}

@@ -5,16 +5,17 @@
 @import "./common/fonts.scss";
 
 /* blocks */
+@import "./blocks/visually-hidden.scss";
 @import "./blocks/page-html.scss";
 @import "./blocks/page-body.scss";
 @import "./blocks/page-main.scss";
 @import "./blocks/button.scss";
 @import "./blocks/htmlacademy.scss";
+@import "./blocks/logo.scss";
 
 /* header */
 @import "./blocks/page-header.scss";
 @import "./blocks/navigation.scss";
-@import "./blocks/page-logo.scss";
 
 // footer
 @import "./blocks/page-footer.scss";

@@ -1,10 +1,37 @@
 // htmlacademy
 
+.htmlacademy {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  color: $text-color-primary;
+
+  &:hover {
+    color: $bg-color-secondary;
+  }
+
+  &:focus-visible {
+    color: $bg-color-secondary;
+    outline: 2px solid $bg-color-secondary;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
 .htmlacademy__text {
+  @include font-family($font-family-secondary, 400, 16px, 125%);
   margin: 0;
-  font-family: $font-family-secondary;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 125%;
   color: $text-color-special;
+}
+
+// tablet
+
+@media (min-width: $tablet-width) {
+  .htmlacademy {
+    justify-content: end;
+    gap: 23px;
+  }
 }

@@ -7,10 +7,12 @@
 .page-html__page-body {
   display: flex;
   flex-direction: column;
-  min-height: 100%;
   width: 100%;
+  min-height: 100%;
   margin: 0 auto;
 }
+
+// tablet
 
 @media (min-width: $tablet-width) {
   .page-html__body {

@@ -16,25 +16,46 @@
 }
 
 .invite__heading {
+  @include font-family($font-family-primary, 400, 16px, 125%);
   margin: 0;
-  font-family: $font-family-primary;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 125%;
   text-transform: uppercase;
-  color: $text-color-main;
+  color: $text-color-auxiliary;
 }
 
 .invite__text {
+  @include font-family($font-family-secondary, 400, 14px, 143%);
   margin: 0;
-  font-family: $font-family-secondary;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 143%;
   color: $text-color-special;
 }
 
 .invite__map {
   width: 100%;
   min-height: 362px;
+}
+
+// tablet
+
+@media (min-width: $tablet-width) {
+  .invite__wrapper {
+    padding: 62px 70px 38px;
+  }
+
+  .invite__heading {
+    @include font-family($font-family-primary, 400, 20px, 130%);
+  }
+
+  .invite__text {
+    @include font-family($font-family-secondary, 400, 16px, 125%);
+    justify-self: end;
+    text-align: right;
+  }
+
+  .invite__text-city {
+    line-height: 380%;
+  }
+
+  .invite__map {
+    width: 100%;
+    min-height: 400px;
+  }
 }

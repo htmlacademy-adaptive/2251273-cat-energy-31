@@ -1,36 +1,37 @@
 // button
 
 .button {
-  font-family: $font-family-primary;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 125%;
-  text-transform: uppercase;
-  text-align: center;
-  background-color: $bg-color-secondary;
-  color: $text-color-secondary;
-  text-decoration: none;
+  @include font-family($font-family-primary, 400, 16px, 125%);
   padding: 10px;
   border: none;
+  background-color: $bg-color-secondary;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $text-color-secondary;
+
+  &:hover {
+    background-color: $bg-color-hover;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $bg-color-secondary;
+  }
+
+  &:active {
+    color: rgba($color: $text-color-secondary, $alpha: 0.3);
+  }
 }
 
 .button--base {
+  padding: 15px;
   font-size: 20px;
   line-height: 130%;
-  padding: 15px;
 }
 
 .button--secondary {
   background-color: $bg-color-primary;
   color: $text-color-special;
-}
-
-.button:hover {
-  background-color: $bg-color-hover;
-}
-
-.button:active {
-  color: rgba($color: $text-color-secondary, $alpha: 0.3);
 }
 
 .button--secondary:hover {
@@ -40,4 +41,13 @@
 .button--secondary:active {
   background-color: $bg-color-special-hover;
   color: rgba($color: $text-color-special, $alpha: 0.3);
+}
+
+// tablet
+
+@media (min-width: $tablet-width) {
+  .button--auxiliary {
+    @include font-family($font-family-primary, 400, 20px, 130%);
+    padding: 14px 26px;
+  }
 }

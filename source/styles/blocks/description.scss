@@ -2,10 +2,7 @@
 
 .description {
   @include list-reset;
-  font-family: $font-family-secondary;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 133%;
+  @include font-family($font-family-secondary, 400, 12px, 133%);
   text-align: center;
   color: $text-color-special;
 }
@@ -13,4 +10,17 @@
 .description__item {
   display: flex;
   justify-content: space-between;
+}
+
+// tablet
+
+@media (min-width: $tablet-width) {
+  .description {
+    @include font-family($font-family-secondary, 400, 16px, 125%);
+  }
+
+  .description__item {
+    padding: 7px 0 5px;
+    border-bottom: 1px solid $decoration-color-secondary;
+  }
 }

@@ -15,6 +15,20 @@
 .card__link {
   display: flex;
   text-decoration: none;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:focus-visible {
+    opacity: 0.6;
+    outline: 2px solid $bg-color-secondary;
+    outline-offset: -2px;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .card__link--all {
@@ -37,14 +51,15 @@
 }
 
 .card__title {
+  @include font-family($font-family-primary, 400, 16px, 125%);
   width: 70%;
   margin: 0;
-  font-family: $font-family-primary;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 125%;
   text-transform: uppercase;
   color: $text-color-normal;
+}
+
+.card__title-wrapping {
+  display: none;
 }
 
 .card__title--all {
@@ -53,14 +68,19 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  gap: 26px;
+  gap: 25px;
 }
 
 .card__title--all::before {
   content: "";
   width: 30px;
   height: 30px;
-  background-color: $decoration-color-primary;
+  background-image: url("../../icons/stack.svg#plus");
+}
+
+.card__description {
+  position: relative;
+  top: -4px;
 }
 
 .card__button {
@@ -73,11 +93,44 @@
 }
 
 .card__text {
+  @include font-family($font-family-secondary, 400, 12px, 133%);
   margin: 0;
-  font-family: $font-family-secondary;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 133%;
   text-align: center;
   color: $text-color-special;
+}
+
+// tablet
+
+@media (min-width: $tablet-width) {
+  .card {
+    grid-template-columns: 1fr;
+    gap: 21px;
+  }
+
+  .card__link--image {
+    grid-row: 1/2;
+    justify-self: center;
+    min-width: 200px;
+    min-height: 210px;
+    margin: -70px 0 0;
+  }
+
+  .card__title {
+    @include font-family($font-family-primary, 400, 20px, 120%);
+    width: 100%;
+    margin: 0;
+    text-align: center;
+  }
+
+  .card__title-wrapping {
+    display: inline;
+  }
+
+  .card__description {
+    top: -10px;
+  }
+
+  .card__button {
+    margin: 0;
+  }
 }

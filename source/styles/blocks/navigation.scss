@@ -6,46 +6,105 @@
 
 .navigation__list {
   @include list-reset;
+  position: absolute;
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  position: absolute;
   width: 100%;
+  max-height: 1000px;
   background-color: $bg-color-main;
+  opacity: 1;
+  overflow: hidden;
+  transition: all 0.3s ease;
 }
 
 .navigation__list--closed {
-  display: none;
+  max-height: 0;
+  opacity: 0;
+  transition: all 0.3s ease;
 }
 
 .navigation__list--no-js {
-  display: block;
   position: static;
+  display: block;
+  max-height: 1000px;
+  opacity: 1;
+  transition: all 0.3s ease;
 }
 
-.navigation__link {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 22px 24px 24px;
-  text-decoration: none;
-  font-family: $font-family-primary;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 100%;
-  text-transform: uppercase;
-  color: $text-color-main;
+.navigation__item {
+  position: relative;
   border-bottom: 2px solid $decoration-color-main;
 }
 
+.navigation__link {
+  @include font-family($font-family-primary, 400, 20px, 100%);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  padding: 12px 14px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $text-color-main;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:focus-visible {
+    opacity: 0.6;
+    outline: 2px solid $bg-color-secondary;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+// tablet
+
 @media (min-width: $tablet-width) {
-  .navigation__list {
+  .navigation {
     display: flex;
-    justify-content: end;
-    flex-direction: row;
+    align-items: center;
+  }
+
+  .navigation__list {
+    position: relative;
+    display: flex;
+    align-self: flex-end;
+    justify-content: flex-end;
+    flex-flow: row wrap;
+    gap: 4px;
+  }
+
+  .navigation__item {
+    border: none;
   }
 
   .navigation__link {
+    @include font-family($font-family-primary, 400, 18px, 133%);
+    position: relative;
     border: none;
+    margin: 2px;
+    padding: 8px 13px;
+    display: flex;
+  }
+
+  .navigation__link--current::after {
+    content: "";
+    position: absolute;
+    left: 13px;
+    right: 13px;
+    bottom: -1px;
+    height: 2px;
+    background-color: $bg-color-secondary;
+  }
+
+  .navigation__list--closed {
+    max-height: 1000px;
+    opacity: 1;
   }
 }

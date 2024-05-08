@@ -4,28 +4,34 @@
   display: flex;
   flex-direction: column;
   gap: 14px;
-  border: none;
-  padding: 20px 0 17px;
+  padding: 24px 20px;
   margin: 0;
+  border: none;
 }
 
 .group--program {
   gap: 13px;
+  padding: 22px 20px 17px;
   border-top: 2px solid $decoration-color-main;
   border-bottom: 2px solid $decoration-color-main;
 }
 
 .group--contacts {
-  padding: 24px 0 3px;
+  padding: 25px 20px 5px;
+}
+
+.group--comment {
+  padding: 20px 20px 5px;
 }
 
 .group--additionally {
   gap: 13px;
-  padding: 15px 0 3px;
+  padding: 20px 20px 32px;
 }
 
 .group__title {
   @include font-family($font-family-primary, 400, 24px, 108%);
-  color: $text-color-main;
+  position: relative;
   margin-bottom: 20px;
+  color: $text-color-main;
 }
