@@ -92,7 +92,7 @@
     color: $bg-color-primary;
     position: absolute;
     top: 0;
-    right: 100px;
+    right: 80px;
   }
 
   .functional__text {
@@ -120,5 +120,22 @@
 
   .functional__text--scales::before {
     background-size: 34%;
+  }
+}
+
+// desktop
+
+@media (min-width: $desktop-width) {
+  .functional__list {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px 80px;
+  }
+
+  .functional__item {
+    padding: 35px 0 60px;
+  }
+
+  .functional__item::before {
+    right: 0;
   }
 }

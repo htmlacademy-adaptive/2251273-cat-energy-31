@@ -58,21 +58,20 @@
         <legend class="group__name visually-hidden">Кот</legend>
         <label class="group__control control" for="cat-name">
           <span class="control__name">Имя:*</span>
-          <input class="control__input control__input--text" type="text" name="cat-name" id="cat-name"
+          <input class="control__input" type="text" name="cat-name" id="cat-name"
             placeholder="Барсик" aria-label="Имя кота" required>
         </label>
         <label class="group__control control" for="cat-weight">
           <span class="control__name">Вес (кг):*</span>
-          <input class="control__input control__input--text control__input--number" type="number" name="cat-weight"
+          <input class="control__input control__input--number" type="number" name="cat-weight"
             id="cat-weight" placeholder="7" aria-label="Вес кота" required min="0">
         </label>
         <label class="group__control control" for="cat-age">
           <span class="control__name">Возраст (лет):</span>
-          <input class="control__input control__input--text control__input--number" type="number" name="cat-age"
+          <input class="control__input control__input--number" type="number" name="cat-age"
             id="cat-age" placeholder="7" aria-label="Возраст кота" min="0">
         </label>
       </fieldset>
-
       <fieldset class="form__group group group--program">
         <legend class="group__name visually-hidden">Подобрать программу</legend>
         <label class="group__control control control--program" for="slim">
@@ -114,17 +113,15 @@
           </svg>
         </label>
       </fieldset>
-
       <fieldset class="form__group group group--comment">
         <legend class="group__name visually-hidden">Комментарий</legend>
         <span class="group__title">Комментарий</span>
         <textarea class="group__control control control--comment" name="comment" id="owner-comment"
-          placeholder="Расскажите обо всех повадках кота" aria-label="Комментарий" rows="6"></textarea>
+          placeholder="Расскажите обо всех повадках кота" aria-label="Комментарий"></textarea>
       </fieldset>
-
       <fieldset class="form__group group group--additionally">
         <legend class="group__name visually-hidden">Дополнительно</legend>
-        <span class="group__title">Дополнительно</span>
+        <span class="group__title group__title--additionally">Дополнительно</span>
         <label class="group__control control control-additionally" for="sweetener">
           <input class="visually-hidden control__input control__input--checkbox" type="checkbox" name="sweetener"
             id="sweetener" value="yes" checked aria-label="Cахарозаменитель">
@@ -151,16 +148,20 @@
         </label>
       </fieldset>
 
-      <button class="page-main__form-button form__button button" type="submit" aria-label="Отправить заявку">Отправить заявку</button>
-      <p class="form__text">* - Обязательные поля</p>
+      <button class="page-main__form-button button button--auxiliary" type="submit" aria-label="Отправить заявку">Отправить заявку</button>
+      <p class="form__text">* &#8212;Обязательные поля</p>
     </form>
     <section class="page-main__invite invite invite--second">
       <h2 class="visually-hidden">Наш адрес в Санкт-Петербурге</h2>
       <div class="invite__wrapper">
         <p class="invite__heading">Приглашаем<br>к сотрудничеству<br>дилеров!</p>
-        <h3 class="invite__text">ул. Большая<br>Конюшенная, д. 19/8<br>Санкт-Петербург</h3>
+        <h3 class="invite__text">ул. Большая<br>Конюшенная, д. 19/8<br>
+          <span  class="invite__text-city">Санкт-Петербург</span>
+        </h3>
       </div>
-      <iframe class="invite__map map" src="https://yandex.ru/map-widget/v1/-/CDRPbIpb"></iframe>
+      <iframe class="invite__map map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A647e399ead918947560bdc80cedd01449838e7b7248188994db2e50c239c278f&amp;source=constructor" width="1280" height="720" style="border:0;"></iframe>
+      <!-- <iframe class="invite__map map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A647e399ead918947560bdc80cedd01449838e7b7248188994db2e50c239c278f&amp;source=constructor" width="1280" height="720" style="border:0;"></iframe> -->
+      <!-- <iframe class="invite__map map" src="https://yandex.ru/map-widget/v1/-/CDRPbIpb"></iframe> -->
     </section>
   </main>
   <footer class="page-body__page-footer page-footer">

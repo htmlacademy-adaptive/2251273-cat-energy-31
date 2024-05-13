@@ -2,6 +2,8 @@
 
 * Студент: [Виталий Еченко](https://up.htmlacademy.ru/adaptive/31/user/2251273).
 * Наставник: [Антон Варнавский](https://htmlacademy.ru/profile/anton_varnauski).
+* Наставник: [Сайт:](https://echenko.github.io/2251273-cat-energy-31).
+
 
 ---
 

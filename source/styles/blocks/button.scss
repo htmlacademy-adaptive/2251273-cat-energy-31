@@ -9,17 +9,20 @@
   text-decoration: none;
   text-transform: uppercase;
   color: $text-color-secondary;
+  user-select: none;
+  cursor: pointer;
 
   &:hover {
     background-color: $bg-color-hover;
   }
 
   &:focus-visible {
+    background-color: $bg-color-hover;
     outline: 2px solid $bg-color-secondary;
   }
 
   &:active {
-    color: rgba($color: $text-color-secondary, $alpha: 0.3);
+    color: rgba($color: $text-color-secondary, $alpha: 0.6);
   }
 }
 
@@ -32,15 +35,20 @@
 .button--secondary {
   background-color: $bg-color-primary;
   color: $text-color-special;
-}
 
-.button--secondary:hover {
-  background-color: $bg-color-special-hover;
-}
+  &:hover {
+    background-color: $bg-color-special-hover;
+  }
 
-.button--secondary:active {
-  background-color: $bg-color-special-hover;
-  color: rgba($color: $text-color-special, $alpha: 0.3);
+  &:focus-visible {
+    background-color: $bg-color-special-hover;
+    outline: 2px solid $bg-color-secondary;
+  }
+
+  &:active {
+    background-color: $bg-color-special-hover;
+    color: rgba($color: $text-color-special, $alpha: 0.6);
+  }
 }
 
 // tablet

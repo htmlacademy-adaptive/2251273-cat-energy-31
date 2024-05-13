@@ -90,15 +90,29 @@
 
 @media (min-width: $tablet-width) {
   .page-header {
-    grid-template-columns: auto 1fr;
+    grid-template-columns: 1fr 2fr;
   }
+
 
   .page-header__wrapper {
     padding: 0;
     border: none;
+    gap: 0;
   }
 
   .page-header__button {
     display: none;
+  }
+}
+
+// desktop
+
+@media (min-width: $desktop-width) {
+  .page-header {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .page-header__wrapper {
+    padding: 0 0 0 14px;
   }
 }

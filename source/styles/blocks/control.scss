@@ -3,10 +3,36 @@
 .control {
   display: flex;
   gap: 13px;
+  user-select: none;
+  cursor: pointer;
+
+  &:hover {
+    .control__mark {
+      outline: 2px solid $decoration-color-hover;
+    }
+  }
+
+  &:focus-visible {
+    .control__mark {
+      outline: 2px solid $decoration-color-hover;
+    }
+  }
+
+  &:has(.control__input[type="radio"]:active) {
+    opacity: 0.6;
+  }
+
+  &:has(.control__input[type="checkbox"]:active) {
+    opacity: 0.6;
+  }
 }
 
 .control--program {
   gap: 15px;
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .control--contacts {
@@ -16,6 +42,10 @@
 
 .control-additionally {
   gap: 15px;
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .control__input {
@@ -30,16 +60,16 @@
   color: $text-color-special;
 
   &:hover {
-    background-color: $bg-color-hover;
+    outline: 2px solid $decoration-color-hover;
   }
 
   &:focus-visible {
-    outline: 2px solid $bg-color-secondary;
+    outline: 2px solid $decoration-color-hover;
   }
+}
 
-  &:active {
-    color: rgba($color: $text-color-secondary, $alpha: 0.3);
-  }
+.control__input:focus-visible + .control__mark {
+  outline: 2px solid $decoration-color-hover;
 }
 
 .control__input--medium {
@@ -102,5 +132,64 @@
 .control--comment {
   @include font-family($font-family-primary, 400, 16px, 112%);
   padding: 17px 14px 25px;
+  min-height: 110px;
   text-transform: uppercase;
+}
+
+// tablet
+
+@media (min-width: $tablet-width) {
+  .control__name {
+    @include font-family($font-family-primary, 400, 20px, 112%);
+  }
+
+  .control__input {
+    @include font-family($font-family-primary, 400, 20px);
+    padding: 11px 40px 10px 19px;
+  }
+
+  .control__input--medium {
+    padding: 12px;
+  }
+
+  .control__mark {
+    width: 38px;
+    height: 38px;
+  }
+
+  .control--program {
+    gap: 19px;
+  }
+
+  .control__input:checked + .control__mark--radio {
+    background-size: 20px 20px;
+  }
+
+  .control__input:checked + .control__mark--checkbox {
+    background-size: 25px 21px;
+  }
+
+  .control--comment {
+    @include font-family($font-family-primary, 400, 20px, 150%);
+    margin: 13px 0 0;
+    padding: 10px 19px 25px;
+    min-height: 140px;
+  }
+
+  .control-additionally {
+    align-self: start;
+    gap: 20px;
+  }
+}
+
+// desktop
+
+@media (min-width: $desktop-width) {
+  .control__icon--email {
+    right: 16px;
+  }
+
+  .control__icon--phone {
+    right: 14px;
+  }
 }

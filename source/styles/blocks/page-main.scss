@@ -64,4 +64,65 @@
   .page-main__example {
     padding: 45px 30px 0;
   }
+
+  .page-main__other {
+    padding: 45px 30px 0;
+  }
+
+  .page-main__subscription {
+    padding: 80px 69px 21px;
+  }
+
+  .page-main__heading {
+    @include font-family($font-family-primary, 400, 60px, 100%);
+    padding: 40px 70px 55px;
+  }
+
+  .page-main__description {
+    @include font-family($font-family-primary, 400, 20px, 150%);
+    width: 50%;
+    padding: 0 70px 39px;
+  }
+
+  .page-main__form-button {
+    margin: 0 0  0 70px;
+  }
+}
+
+// desktop
+
+@media (min-width: $desktop-width) {
+  .page-main__programs {
+    padding: 0 110px;
+  }
+
+  .page-main__functional {
+    padding: 70px 110px 43px;
+  }
+
+  .page-main__example {
+    padding: 23px 110px 0;
+  }
+
+  .page-main__other {
+    padding: 60px 110px 0;
+  }
+
+  .page-main__subscription {
+    padding: 97px 110px 25px;
+  }
+
+  .page-main__heading {
+    padding: 20px 110px 55px;
+  }
+
+  .page-main__description {
+    @include font-family($font-family-primary, 400, 20px, 150%);
+    width: 25%;
+    padding: 0 110px 39px;
+  }
+
+  .page-main__form-button {
+    margin: 0;
+  }
 }

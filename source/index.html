@@ -34,10 +34,10 @@
       <button class="page-header__button page-header__button--no-js page-header__button--js" type="button"
         aria-label="Открыть меню"></button>
     </div>
-    <nav class="page-header__navigation navigation">
+    <nav class="page-header__navigation navigation navigation--auxiliary">
       <!-- no-js защита работы без JS -->
       <!-- closed закрытое меню -->
-      <ul class="navigation__list navigation__list--closed navigation__list--no-js">
+      <ul class="navigation__list navigation__list--auxiliary navigation__list--closed navigation__list--no-js">
         <li class="navigation__item">
           <a class="navigation__link navigation__link--current" href="index.html" aria-label="Главная">Главная</a>
         </li>
@@ -133,7 +133,9 @@
           <p class="example__definition">затрачено времени</p>
         </li>
       </ul>
-      <p class="example__description">Затраты на питание:<br class="example__description-wrapping"> 15 000 РУБ.</p>
+      <p class="example__description">Затраты на питание:<br class="example__description-wrapping">
+        <span>15 000 РУБ.</span>
+      </p>
       <div class="example__slider slider">
         <div class="slider__wrapper slider__wrapper-before">
           <picture>
@@ -184,7 +186,9 @@
           <span  class="invite__text-city">Санкт-Петербург</span>
         </h3>
       </div>
-      <iframe class="invite__map map" src="https://yandex.ru/map-widget/v1/-/CDRPbIpb"></iframe>
+      <iframe class="invite__map map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A647e399ead918947560bdc80cedd01449838e7b7248188994db2e50c239c278f&amp;source=constructor" width="1280" height="720" style="border:0;"></iframe>
+      <!-- <iframe class="invite__map map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A647e399ead918947560bdc80cedd01449838e7b7248188994db2e50c239c278f&amp;source=constructor" width="1280" height="720" style="border:0;"></iframe> -->
+      <!-- <iframe class="invite__map map" src="https://yandex.ru/map-widget/v1/-/CDRPbIpb"></iframe> -->
     </section>
   </main>
   <footer class="page-body__page-footer page-footer">

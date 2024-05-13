@@ -8,7 +8,50 @@
 
 .form__text {
   @include font-family($font-family-secondary, 400, 14px, 114%);
-  margin: 20px 0 33px;
+  margin: 22px 0 32px;
   text-align: center;
   color: $text-color-main;
+}
+
+// tablet
+
+@media (min-width: $tablet-width) {
+  .form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 60px;
+    padding: 0 0 58px;
+  }
+
+  .form-line {
+    display: grid;
+    grid-template-columns: 10fr 6.8fr;
+    gap: 0;
+  }
+
+  .form__text {
+    @include font-family($font-family-secondary, 400, 16px, 100%);
+    margin: 15px 0 0;
+    text-align: left;
+  }
+}
+
+// desktop
+
+@media (min-width: $desktop-width) {
+  .form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 80px;
+    padding: 0 110px 77px;
+  }
+
+  .form-line {
+    grid-template-columns: 10fr 5.2fr;
+    gap: 0;
+  }
+
+  .form__text {
+    margin: 18px 0 0;
+  }
 }

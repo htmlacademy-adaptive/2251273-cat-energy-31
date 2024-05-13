@@ -37,8 +37,8 @@
 
   .catalog__list {
     grid-template-columns: repeat(2, 1fr);
-    gap: 139px 60px;
-    border-bottom: 1px solid $decoration-color-main;
+    gap: 141px 60px;
+    border-bottom: none;
   }
 
   .catalog__item {
@@ -49,5 +49,31 @@
 
   .catalog__item--all {
     padding: 50px 37px 40px;
+    border: 1px solid $decoration-color-main;
+    background-color: $bg-color-main;
+  }
+}
+
+// desktop
+
+@media (min-width: $desktop-width) {
+  .catalog {
+    padding: 10px 110px;
+  }
+
+  .catalog__list {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 144px 80px;
+    border-bottom: none;
+  }
+
+  .catalog__item {
+    padding: 0 38px 40px;
+  }
+
+  .catalog__item--all {
+    padding: 50px 37px 40px;
+    border: 1px solid $decoration-color-main;
+    background-color: $bg-color-main;
   }
 }

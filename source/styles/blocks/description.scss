@@ -24,3 +24,19 @@
     border-bottom: 1px solid $decoration-color-secondary;
   }
 }
+
+// desktop
+
+@media (min-width: $desktop-width) {
+  .description {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin: 7px 0 5px;
+  }
+
+  .description__item {
+    padding: 5px 0;
+    border-bottom: 1px solid $decoration-color-secondary;
+  }
+}

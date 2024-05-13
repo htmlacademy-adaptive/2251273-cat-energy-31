@@ -7,6 +7,7 @@
 .page-body__page-footer {
   padding: 19px 20px 20px;
   background-color: $bg-color-primary;
+  z-index: 1;
 }
 
 // tablet
@@ -18,5 +19,21 @@
 
   .page-body__page-footer {
     padding: 35px 30px;
+  }
+}
+
+// desktop
+
+@media (min-width: $desktop-width) {
+  .page-body {
+    max-width: $desktop-width;
+  }
+
+  .page-body__page-header {
+    padding: 55px 96px;
+  }
+
+  .page-body__page-footer {
+    padding: 48px 110px;
   }
 }
