@@ -17,7 +17,7 @@
 }
 
 .group--contacts {
-  padding: 25px 20px 5px;
+  padding: 26px 20px 3px;
 }
 
 .group--comment {
@@ -32,8 +32,20 @@
 .group__title {
   @include font-family($font-family-primary, 400, 24px, 108%);
   position: relative;
-  margin-bottom: 20px;
+  display: flex;
+  gap: 20px;
+  margin: 0 -20px 20px 0;
   color: $text-color-main;
+}
+
+.group__title::after {
+  content: "";
+  position: relative;
+  min-width: 20px;
+  height: 2px;
+  flex-grow: 1;
+  top: 15px;
+  background-color: $bg-color-secondary;
 }
 
 // tablet
@@ -54,7 +66,26 @@
 
   .group__title {
     @include font-family($font-family-primary, 400, 36px, 100%);
-    margin-bottom: 55px;
+    gap: 40px;
+    margin: 0 -70px 55px;
+  }
+
+  .group__title::before {
+    content: "";
+    position: relative;
+    top: 22px;
+    min-width: 40px;
+    height: 2px;
+    background-color: $bg-color-secondary;
+  }
+
+  .group__title::after {
+    top: 22px;
+    min-width: 70px;
+  }
+
+  .group__title-wrapping {
+    display: none;
   }
 
   .group__title--additionally {
@@ -63,7 +94,7 @@
   }
 
   .group--contacts {
-    padding: 19px 70px 40px;
+    padding: 20px 70px 40px;
   }
 
   .group--comment {
@@ -119,5 +150,18 @@
     grid-column: 1 / -1;
     gap: 32px 80px;
     padding: 10px 0 40px;
+  }
+
+  .group__title {
+    margin-left: -110px;
+    margin-right: -110px;
+  }
+
+  .group__title::before {
+    min-width: 70px;
+  }
+
+  .group__title::after {
+    min-width: 70px;
   }
 }

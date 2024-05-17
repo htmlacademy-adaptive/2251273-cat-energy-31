@@ -30,7 +30,7 @@
 .page-main__heading {
   @include font-family($font-family-primary, 400, 36px, 100%);
   margin: 0;
-  padding: 27px 20px 37px;
+  padding: 28px 20px 37px;
   color: $text-color-main;
 }
 
@@ -75,7 +75,7 @@
 
   .page-main__heading {
     @include font-family($font-family-primary, 400, 60px, 100%);
-    padding: 40px 70px 55px;
+    padding: 40px 70px 54px;
   }
 
   .page-main__description {

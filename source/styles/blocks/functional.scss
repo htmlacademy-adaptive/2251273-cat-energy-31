@@ -87,7 +87,7 @@
 
   .functional__item::before {
     @include font-family($font-family-primary, 400, 280px, 98%);
-    content: counter(item) "";
+    content: counter(item);
     counter-increment: item;
     color: $bg-color-primary;
     position: absolute;

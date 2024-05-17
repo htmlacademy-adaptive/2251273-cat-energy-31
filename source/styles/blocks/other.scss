@@ -7,10 +7,22 @@
 
 .other__heading {
   @include font-family($font-family-primary, 400, 24px, 100%);
+  position: relative;
   display: flex;
-  margin: 0;
+  gap: 40px;
+  margin: 0 -20px 0 0;
   padding: 0 0 35px;
   color: $text-color-main;
+}
+
+.other__heading::after {
+  content: "";
+  position: relative;
+  flex-grow: 1;
+  top: 10px;
+  min-width: 20px;
+  height: 2px;
+  background-color: $bg-color-secondary;
 }
 
 .other__list {
@@ -99,7 +111,22 @@
 @media (min-width: $tablet-width) {
   .other__heading {
     @include font-family($font-family-primary, 400, 32px, 100%);
-    padding: 0 0 80px 42px;
+    margin: 0 -30px;
+    padding: 0 0 80px;
+  }
+
+  .other__heading::before {
+    content: "";
+    top: 13px;
+    position: relative;
+    min-width: 30px;
+    height: 2px;
+    background-color: $bg-color-secondary;
+  }
+
+  .other__heading::after {
+    top: 13px;
+    min-width: 30px;
   }
 
   .other__item {
@@ -169,7 +196,19 @@
   .other__heading {
     @include font-family($font-family-primary, 400, 40px, 100%);
     grid-column: 1 / -1;
+    gap: 40px;
+    margin: 0 -110px;
     padding: 0 0 80px;
+  }
+
+  .other__heading::before {
+    top: 18px;
+    min-width: 70px;
+  }
+
+  .other__heading::after {
+    top: 18px;
+    min-width: 70px;
   }
 
   .other__item {

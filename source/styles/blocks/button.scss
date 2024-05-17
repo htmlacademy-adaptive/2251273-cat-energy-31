@@ -19,10 +19,18 @@
   &:focus-visible {
     background-color: $bg-color-hover;
     outline: 2px solid $bg-color-secondary;
+    outline-offset: 2px;
   }
 
   &:active {
     color: rgba($color: $text-color-secondary, $alpha: 0.6);
+  }
+
+  &:disabled {
+    background-color: $bg-color-hover;
+    color: $text-color-secondary;
+    cursor: default;
+    opacity: 0.3;
   }
 }
 
@@ -42,12 +50,19 @@
 
   &:focus-visible {
     background-color: $bg-color-special-hover;
-    outline: 2px solid $bg-color-secondary;
+    outline: 2px solid $bg-color-primary;
+    outline-offset: 2px;
   }
 
   &:active {
     background-color: $bg-color-special-hover;
     color: rgba($color: $text-color-special, $alpha: 0.6);
+  }
+
+  &:disabled {
+    background-color: $bg-color-special-hover;
+    color: $text-color-special;
+    cursor: default;
   }
 }
 
