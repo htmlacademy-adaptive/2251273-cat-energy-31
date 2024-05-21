@@ -1,0 +1,96 @@
+// invite
+
+.invite {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.invite--second {
+  background-color: $bg-color-primary;
+}
+
+.invite__wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 26px 20px;
+}
+
+.invite__heading {
+  @include font-family($font-family-primary, 400, 16px, 125%);
+  margin: 0;
+  text-transform: uppercase;
+  color: $text-color-auxiliary;
+}
+
+.invite__text {
+  @include font-family($font-family-secondary, 400, 14px, 143%);
+  margin: 0;
+  color: $text-color-special;
+}
+
+.invite__map {
+  width: 100%;
+  min-height: 362px;
+  border: none;
+  background-color: $bg-color-primary;
+  background-image:
+    image-set(url("../../images/map@1x.webp") 1x,
+    url("../../images/map@2x.webp") 2x,
+    url("../../images/map@1x.png") 1x,
+    url("../../images/map@2x.png") 2x);
+  background-size: cover;
+  background-position: center center;
+}
+
+// tablet
+
+@media (min-width: $tablet-width) {
+  .invite__wrapper {
+    padding: 62px 70px 38px;
+  }
+
+  .invite__heading {
+    @include font-family($font-family-primary, 400, 20px, 130%);
+  }
+
+  .invite__text {
+    @include font-family($font-family-secondary, 400, 16px, 125%);
+    justify-self: end;
+    text-align: right;
+  }
+
+  .invite__text-city {
+    line-height: 380%;
+  }
+
+  .invite__map {
+    width: 100%;
+    min-height: 400px;
+  }
+}
+
+// desktop
+
+@media (min-width: $desktop-width) {
+  .invite {
+    position: relative;
+  }
+
+  .invite__wrapper {
+    position: absolute;
+    display: flex;
+    gap: 95px;
+    top: 97px;
+    left: 110px;
+    padding: 60px 80px 39px;
+    background-color: $bg-color-main;
+  }
+
+  .invite__heading {
+    text-align: left;
+  }
+
+  .invite__text {
+    text-align: left;
+  }
+}

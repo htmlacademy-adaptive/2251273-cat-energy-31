@@ -1,0 +1,141 @@
+// functional
+
+.functional {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 20px;
+}
+
+.functional__heading {
+  @include font-family($font-family-primary, 400, 36px, 111%);
+  margin: 0 0 20px;
+  color: $text-color-main;
+}
+
+.functional__list {
+  @include list-reset;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.functional__text {
+  @include font-family($font-family-secondary, 400, 14px, 129%);
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  margin: 0;
+  column-gap: 20px;
+  color: $text-color-special;
+}
+
+.functional__text::before {
+  content: "";
+  width: 60px;
+  height: 60px;
+  background-color: $bg-color-secondary;
+}
+
+.functional__text--leaf::before {
+  background-image: url("../../icons/stack.svg#functional_icon-leaf");
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.functional__text--cook::before {
+  background-image: url("../../icons/stack.svg#functional_icon-cook");
+  background-size: 45%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.functional__text--eat::before {
+  background-image: url("../../icons/stack.svg#functional_icon-eat");
+  background-size: 45%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.functional__text--scales::before {
+  background-image: url("../../icons/stack.svg#functional_icon-scales");
+  background-size: 45%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+// tablet
+
+@media (min-width: $tablet-width) {
+  .functional__heading {
+    @include font-family($font-family-primary, 400, 60px, 100%);
+    margin: 0 0 17px;
+    color: $text-color-main;
+  }
+
+  .functional__list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 39px 60px;
+    counter-reset: item;
+  }
+
+  .functional__item {
+    position: relative;
+    padding: 35px 60px 60px 0;
+  }
+
+  .functional__item::before {
+    @include font-family($font-family-primary, 400, 280px, 98%);
+    content: counter(item);
+    counter-increment: item;
+    color: $bg-color-primary;
+    position: absolute;
+    top: 0;
+    right: 80px;
+  }
+
+  .functional__text {
+    @include font-family($font-family-secondary, 400, 16px, 150%);
+    grid-template-columns: 1fr;
+    gap: 31px;
+  }
+
+  .functional__text::before {
+    width: 80px;
+    height: 80px;
+  }
+
+  .functional__text--leaf::before {
+    background-size: 38%;
+  }
+
+  .functional__text--cook::before {
+    background-size: 34%;
+  }
+
+  .functional__text--eat::before {
+    background-size: 34%;
+  }
+
+  .functional__text--scales::before {
+    background-size: 34%;
+  }
+}
+
+// desktop
+
+@media (min-width: $desktop-width) {
+  .functional__list {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px 80px;
+  }
+
+  .functional__item {
+    padding: 35px 0 60px;
+  }
+
+  .functional__item::before {
+    right: 0;
+  }
+}

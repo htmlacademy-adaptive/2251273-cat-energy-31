@@ -1,0 +1,261 @@
+// other
+
+.other {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.other__heading {
+  @include font-family($font-family-primary, 400, 24px, 100%);
+  position: relative;
+  display: flex;
+  gap: 40px;
+  margin: 0 -20px 0 0;
+  padding: 0 0 35px;
+  color: $text-color-main;
+}
+
+.other__heading::after {
+  content: "";
+  position: relative;
+  flex-grow: 1;
+  top: 10px;
+  min-width: 20px;
+  height: 2px;
+  background-color: $bg-color-secondary;
+}
+
+.other__list {
+  @include list-reset;
+  display: grid;
+  grid-template-columns: 1fr;
+  border-bottom: 1px solid $decoration-color-main;
+}
+
+.other__item {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 14px 0 17px;
+  gap: 11px;
+  border-top: 1px solid $decoration-color-main;
+}
+
+.other__title {
+  @include font-family($font-family-primary, 400, 16px, 100%);
+  grid-column: 1/-1;
+  margin: 0;
+  text-transform: uppercase;
+  color: $text-color-normal;
+}
+
+.other__text {
+  @include font-family($font-family-secondary, 400, 14px, 129%);
+  margin: 0;
+  color: $text-color-special;
+}
+
+.other__price {
+  @include font-family($font-family-secondary, 400, 14px, 129%);
+  justify-self: flex-end;
+  margin: 0;
+  color: $text-color-special;
+}
+
+.other__button {
+  grid-column: 1/-1;
+  margin: 2px 0 0;
+}
+
+.other__gifts {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 290px;
+  margin: 35px 0 0;
+  padding: 60px 0 30px;
+  background-color: $bg-color-secondary;
+  background-image:
+    linear-gradient(to top,
+    rgba($color: $bg-color-secondary, $alpha: 0.85),
+    rgba($color: $bg-color-secondary, $alpha: 0.85)),
+    image-set(url("../../images/other/background-gifts@1x.webp") 1x,
+    url("../../images/other/background-gifts@2x.jpg") 2x);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.other__gifts-text {
+  @include font-family($font-family-secondary, 400, 16px, 125%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  margin: 0;
+  padding: 0 60px;
+  text-align: center;
+  color: $text-color-secondary;
+}
+
+.other__gifts-text::before {
+  content: "";
+  display: block;
+  width: 78px;
+  height: 80px;
+  background-image: url("../../icons/stack.svg#icon-gift");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+// tablet
+
+@media (min-width: $tablet-width) {
+  .other__heading {
+    @include font-family($font-family-primary, 400, 32px, 100%);
+    margin: 0 -30px;
+    padding: 0 0 80px;
+  }
+
+  .other__heading::before {
+    content: "";
+    top: 13px;
+    position: relative;
+    min-width: 30px;
+    height: 2px;
+    background-color: $bg-color-secondary;
+  }
+
+  .other__heading::after {
+    top: 13px;
+    min-width: 30px;
+  }
+
+  .other__item {
+    grid-template-columns: 1fr repeat(2, auto);
+    padding: 26px 38px 28px;
+    gap: 21px 10px;
+    border-top: 1px solid $decoration-color-main;
+    border-right: 1px solid $decoration-color-main;
+    border-left: 1px solid $decoration-color-main;
+    border-bottom: none;
+  }
+
+  .other__title {
+    @include font-family($font-family-primary, 400, 20px, 100%);
+    grid-column: 1/2;
+  }
+
+  .other__text {
+    @include font-family($font-family-secondary, 400, 16px, 125%);
+    padding: 1px 0 0;
+  }
+
+  .other__price {
+    @include font-family($font-family-secondary, 400, 16px, 129%);
+    min-width: 82px;
+    text-align: right;
+  }
+
+  .other__gifts {
+    position: relative;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    min-height: 200px;
+    margin: 69px 0 0;
+    padding: 50px 107px;
+    background-position: center 60%;
+  }
+
+  .other__gifts-text {
+    @include font-family($font-family-secondary, 400, 16px, 125%);
+    text-align: left;
+    width: 180px;
+    padding: 0;
+    color: $text-color-secondary;
+  }
+
+  .other__gifts-text::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 78px;
+    width: 80px;
+    height: 90px;
+    transform: translateY(-50%);
+  }
+}
+
+// desktop
+
+@media (min-width: $desktop-width) {
+  .other {
+    grid-template-columns: 110fr 30fr;
+    gap: 0 80px;
+  }
+
+  .other__heading {
+    @include font-family($font-family-primary, 400, 40px, 100%);
+    grid-column: 1 / -1;
+    gap: 40px;
+    margin: 0 -110px;
+    padding: 0 0 80px;
+  }
+
+  .other__heading::before {
+    top: 18px;
+    min-width: 70px;
+  }
+
+  .other__heading::after {
+    top: 18px;
+    min-width: 70px;
+  }
+
+  .other__item {
+    grid-template-columns: 316px 233px 72px 1fr;
+    padding: 13px 0 15px;
+    gap: 0 10px;
+    border-top: 1px solid $decoration-color-main;
+    border-right: none;
+    border-left: none;
+    border-bottom: 1px solid $decoration-color-main;
+    align-items: center;
+  }
+
+  .other__price {
+    @include font-family($font-family-secondary, 400, 16px, 129%);
+    min-width: 100%;
+    text-align: left;
+  }
+
+  .other__button {
+    grid-column: -2 / -1;
+    margin: 2px 0 0;
+  }
+
+  .other__gifts {
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+    margin: 0;
+    padding: 40px 0 30px;
+    background-position: 100% 50%;
+  }
+
+  .other__gifts-text {
+    text-align: center;
+    gap: 44px;
+    width: 65%;
+    padding: 0;
+  }
+
+  .other__gifts-text::before {
+    content: "";
+    position: static;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 90px;
+    transform: translateY(0);
+  }
+}

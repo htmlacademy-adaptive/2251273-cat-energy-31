@@ -1,0 +1,118 @@
+// page-header
+
+.page-header {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.page-header__wrapper {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+  align-items: center;
+  padding: 13px 15px 12px  20px;
+  border-bottom: 2px solid $decoration-color-main;
+}
+
+.page-header__button {
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  min-width: 38px;
+  min-height: 38px;
+  padding: 0;
+  border: none;
+  background-color: $bg-color-main;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:focus-visible {
+    opacity: 0.6;
+    outline: 2px solid $bg-color-secondary;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.page-header__button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  width: 24px;
+  height: 2px;
+  transform: translate(50%, -100%);
+  background-color: $text-color-main;
+  box-shadow: 0 8px 0 0 $text-color-main, 0 -8px 0 0 $text-color-main;
+  transition: all 0.3s ease;
+}
+
+.page-header__button--closed::before {
+  transform: translate(50%, -100%) rotate(45deg);
+  box-shadow: none;
+  transition: all 0.3s ease;
+}
+
+.page-header__button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  width: 24px;
+  height: 2px;
+  transform: translate(50%, -100%);
+  background-color: $text-color-main;
+  box-shadow: 0 8px 0 0 $text-color-main, 0 -8px 0 0 $text-color-main;
+  transition: all 0.3s ease;
+}
+
+.page-header__button--closed::after {
+  transform: translate(50%, -100%) rotate(-45deg);
+  box-shadow: none;
+  transition: all 0.3s ease;
+}
+
+.page-header__button--closed {
+  width: 24px;
+  height: 24px;
+  border: none;
+}
+
+.page-header__button--no-js {
+  display: none;
+}
+
+// tablet
+
+@media (min-width: $tablet-width) {
+  .page-header {
+    grid-template-columns: 1fr 2fr;
+  }
+
+
+  .page-header__wrapper {
+    padding: 0;
+    border: none;
+    gap: 0;
+  }
+
+  .page-header__button {
+    display: none;
+  }
+}
+
+// desktop
+
+@media (min-width: $desktop-width) {
+  .page-header {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .page-header__wrapper {
+    padding: 0 0 0 14px;
+  }
+}

@@ -1,0 +1,243 @@
+// control
+
+.control {
+  display: flex;
+  gap: 13px;
+  user-select: none;
+  cursor: pointer;
+
+  &:hover {
+    .control__mark {
+      outline: 2px solid $decoration-color-hover;
+    }
+  }
+
+  &:focus-visible {
+    .control__mark {
+      outline: 2px solid $decoration-color-hover;
+    }
+  }
+
+  &:has(.control__icon:hover) {
+    .control__input {
+      outline: 2px solid $decoration-color-focus;
+    }
+  }
+
+  &:has(.control__input[type="radio"]:active) {
+    opacity: 0.6;
+  }
+
+  &:has(.control__input[type="radio"]:disabled:active) {
+    opacity: 0.3;
+  }
+
+  &:has(.control__input[type="checkbox"]:active) {
+    opacity: 0.6;
+  }
+
+  &:has(.control__input[type="checkbox"]:disabled:active) {
+    opacity: 0.3;
+  }
+
+  &:has(:disabled) {
+    cursor: default;
+    opacity: 0.3;
+  }
+}
+
+.control--program {
+  gap: 15px;
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.control--contacts {
+  position: relative;
+  gap: 14px;
+}
+
+.control-additionally {
+  gap: 15px;
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.control__input {
+  @include font-family($font-family-primary, 400, 16px);
+  box-sizing: border-box;
+  flex-grow: 1;
+  width: 50%;
+  margin: 0;
+  padding: 9px 14px;
+  text-transform: uppercase;
+  border: 1px solid $decoration-color-primary;
+  color: $text-color-special;
+
+  &:hover {
+    outline: 2px solid $decoration-color-hover;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $decoration-color-hover;
+  }
+
+  &:disabled {
+    outline: none;
+  }
+}
+
+.control__input:focus-visible + .control__mark {
+  outline: 2px solid $decoration-color-hover;
+}
+
+.control__input:disabled:hover + .control__mark {
+  outline: none;
+}
+
+.control__input--medium {
+  @include font-family($font-family-primary, 400, 20px);
+  padding: 12px;
+}
+
+.control__input--contacts {
+  padding: 10px 42px 10px 14px;
+}
+
+.control__input--invalid {
+  outline: 2px solid $decoration-color-error;
+}
+
+.control__icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  &:hover {
+    color: $bg-color-secondary;
+  }
+}
+
+.control__icon--email {
+  right: 13px;
+}
+
+.control__icon--phone {
+  right: 12px;
+}
+
+.control__mark {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border: 1px solid $decoration-color-primary;
+}
+
+.control__mark--radio {
+  border-radius: 50%;
+}
+
+.control__input:checked + .control__mark--radio {
+  background-image: url("../../icons/stack.svg#form_button-radio");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 13px 13px;
+}
+
+.control__input:checked + .control__mark--checkbox {
+  background-image: url("../../icons/stack.svg#form_button-checkbox");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 18px 14px;
+}
+
+.control__name {
+  @include font-family($font-family-primary, 400, 16px, 112%);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  text-transform: uppercase;
+  color: $text-color-special;
+}
+
+.control--comment {
+  @include font-family($font-family-primary, 400, 16px, 112%);
+  padding: 17px 14px 25px;
+  min-height: 110px;
+  text-transform: uppercase;
+
+  &:hover {
+    cursor: text;
+  }
+
+  &:focus-visible {
+    cursor: text;
+    outline: 2px solid $decoration-color-hover;
+  }
+
+  &:disabled {
+    cursor: default;
+  }
+}
+
+// tablet
+
+@media (min-width: $tablet-width) {
+  .control__name {
+    @include font-family($font-family-primary, 400, 20px, 112%);
+  }
+
+  .control__input {
+    @include font-family($font-family-primary, 400, 20px);
+    padding: 11px 40px 10px 19px;
+  }
+
+  .control__input--medium {
+    padding: 12px;
+  }
+
+  .control__mark {
+    width: 38px;
+    height: 38px;
+  }
+
+  .control--program {
+    gap: 19px;
+  }
+
+  .control__input:checked + .control__mark--radio {
+    background-size: 20px 20px;
+  }
+
+  .control__input:checked + .control__mark--checkbox {
+    background-size: 25px 21px;
+  }
+
+  .control--comment {
+    @include font-family($font-family-primary, 400, 20px, 150%);
+    margin: 13px 0 0;
+    padding: 10px 19px 25px;
+    min-height: 140px;
+  }
+
+  .control-additionally {
+    align-self: start;
+    gap: 20px;
+  }
+}
+
+// desktop
+
+@media (min-width: $desktop-width) {
+  .control__icon--email {
+    right: 16px;
+  }
+
+  .control__icon--phone {
+    right: 14px;
+  }
+}

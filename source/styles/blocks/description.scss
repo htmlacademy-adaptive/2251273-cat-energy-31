@@ -1,0 +1,42 @@
+// description
+
+.description {
+  @include list-reset;
+  @include font-family($font-family-secondary, 400, 12px, 133%);
+  text-align: center;
+  color: $text-color-special;
+}
+
+.description__item {
+  display: flex;
+  justify-content: space-between;
+}
+
+// tablet
+
+@media (min-width: $tablet-width) {
+  .description {
+    @include font-family($font-family-secondary, 400, 16px, 125%);
+  }
+
+  .description__item {
+    padding: 7px 0 5px;
+    border-bottom: 1px solid $decoration-color-secondary;
+  }
+}
+
+// desktop
+
+@media (min-width: $desktop-width) {
+  .description {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin: 7px 0 5px;
+  }
+
+  .description__item {
+    padding: 5px 0;
+    border-bottom: 1px solid $decoration-color-secondary;
+  }
+}

@@ -1,0 +1,97 @@
+// subscription
+
+.subscription {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.subscription__heading {
+  @include font-family($font-family-primary, 400, 24px, 100%);
+  display: flex;
+  gap: 40px;
+  margin: 0 -20px 0 0;
+  padding: 0 0 32px;
+  color: $text-color-main;
+}
+
+.subscription__heading::after {
+  content: "";
+  position: relative;
+  min-width: 20px;
+  height: 2px;
+  flex-grow: 1;
+  top: 10px;
+  background-color: $bg-color-secondary;
+}
+
+.subscription__text {
+  @include font-family($font-family-primary, 400, 16px, 150%);
+  margin: 0;
+  padding: 0 0 24px;
+  text-align: center;
+  color: $text-color-main;
+}
+
+.subscription__form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+// tablet
+
+@media (min-width: $tablet-width) {
+  .subscription__heading {
+    @include font-family($font-family-primary, 400, 32px, 100%);
+    margin: 0 -68px;
+    padding: 0 0 66px;
+  }
+
+  .subscription__heading::before {
+    content: "";
+    position: relative;
+    top: 13px;
+    min-width: 30px;
+    height: 2px;
+    background-color: $bg-color-secondary;
+  }
+
+  .subscription__heading::after {
+    top: 13px;
+    min-width: 30px;
+  }
+
+  .subscription__text {
+    @include font-family($font-family-primary, 400, 24px, 133%);
+  }
+
+  .subscription__form {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+// desktop
+
+@media (min-width: $desktop-width) {
+  .subscription__heading {
+    @include font-family($font-family-primary, 400, 40px, 100%);
+    margin: 0 -110px;
+    padding: 0 0 70px;
+  }
+
+  .subscription__heading::before {
+    top: 17px;
+    min-width: 70px;
+  }
+
+  .subscription__heading::after {
+    top: 17px;
+    min-width: 70px;
+  }
+
+  .subscription__form {
+    justify-self: center;
+    width: 752px;
+  }
+}

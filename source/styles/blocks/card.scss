@@ -1,0 +1,180 @@
+// card
+
+.card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 17px 0;
+}
+
+.card--all {
+  grid-template-columns: 1fr;
+  justify-items: stretch;
+  gap: 21px;
+}
+
+.card__link {
+  display: flex;
+  text-decoration: none;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $bg-color-secondary;
+    outline-offset: -2px;
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.card__link--all {
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+}
+
+.card__link--image {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+  justify-content: center;
+  align-items: center;
+}
+
+.card__image {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.card__title {
+  @include font-family($font-family-primary, 400, 16px, 125%);
+  width: 70%;
+  margin: 0;
+  text-transform: uppercase;
+  color: $text-color-normal;
+}
+
+.card__title-wrapping {
+  display: none;
+}
+
+.card__title--all {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 25px;
+}
+
+.card__title--all::before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-image: url("../../icons/stack.svg#plus");
+}
+
+.card__description {
+  position: relative;
+  top: -4px;
+}
+
+.card__button {
+  align-self: flex-end;
+  grid-column: 1 / -1;
+}
+
+.card__text {
+  @include font-family($font-family-secondary, 400, 12px, 133%);
+  margin: 0;
+  text-align: center;
+  color: $text-color-special;
+}
+
+// tablet
+
+@media (min-width: $tablet-width) {
+  .card {
+    grid-template-columns: 1fr;
+    gap: 21px;
+  }
+
+  .card__link--all {
+    justify-content: start;
+    gap: 23px;
+  }
+
+  .card__link--image {
+    grid-row: 1 / 2;
+    min-width: 200px;
+    min-height: 210px;
+    margin: -70px 0 0;
+  }
+
+  .card__title {
+    @include font-family($font-family-primary, 400, 20px, 120%);
+    width: 100%;
+    margin: 0;
+    text-align: center;
+  }
+
+  .card__title--all {
+    align-self: center;
+    gap: 50px;
+    width: 70%;
+  }
+
+  .card__title--all::before {
+    content: "";
+    width: 60px;
+    height: 60px;
+  }
+
+  .card__title-wrapping {
+    display: inline;
+  }
+
+  .card__description {
+    top: -10px;
+  }
+
+  .card__button {
+    margin: 0;
+  }
+
+  .card__text {
+    @include font-family($font-family-secondary, 400, 16px, 112%);
+    align-self: center;
+    width: 80%;
+  }
+}
+
+// desktop
+
+@media (min-width: $desktop-width) {
+  .card__link--image {
+    min-width: 168px;
+    margin: -70px 0 -10px;
+  }
+
+  .card__title--all {
+    gap: 39px;
+    width: 80%;
+  }
+
+  .card__text {
+    width: 100%;
+  }
+
+  .card__link--all {
+    justify-content: start;
+    gap: 24px;
+  }
+}

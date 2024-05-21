@@ -1,0 +1,47 @@
+// social
+
+.social {
+  @include list-reset;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin: 0;
+  padding: 8px 0;
+  border-top: 1px solid $decoration-color-primary;
+  border-bottom: 1px solid $decoration-color-primary;
+}
+
+.social__link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  min-width: 28px;
+  min-height: 24px;
+  padding: 10px;
+  color: $bg-color-special;
+
+  &:hover {
+    color: $bg-color-secondary;
+  }
+
+  &:focus-visible {
+    color: $bg-color-secondary;
+    outline: 2px solid $bg-color-secondary;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+// tablet
+
+@media (min-width: $tablet-width) {
+  .social {
+    border: none;
+    padding: 18px 0 10px;
+  }
+}

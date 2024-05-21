@@ -1,0 +1,27 @@
+// pages
+
+.page-html {
+  height: 100%;
+}
+
+.page-html__page-body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100%;
+  margin: 0 auto;
+}
+
+// tablet
+
+@media (min-width: $tablet-width) {
+  .page-html__body {
+    width: $tablet-width;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-html__body {
+    width: $desktop-width;
+  }
+}

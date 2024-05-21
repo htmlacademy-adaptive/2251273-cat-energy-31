@@ -1,0 +1,31 @@
+// page-footer
+
+.page-footer {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.page-footer__logo {
+  padding: 20px 0 19px;
+}
+
+.page-footer__htmlacademy {
+  padding: 20px 0;
+}
+
+// tablet
+
+@media (min-width: $tablet-width) {
+  .page-footer {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+
+  .page-footer__logo {
+    padding: 22px 0;
+  }
+
+  .page-footer__htmlacademy {
+    padding: 22px 0;
+  }
+}
