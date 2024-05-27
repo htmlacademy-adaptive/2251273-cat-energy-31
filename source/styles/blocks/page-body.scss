@@ -26,7 +26,7 @@
 
 @media (min-width: $desktop-width) {
   .page-body {
-    max-width: $desktop-width;
+    min-width: $desktop-width;
   }
 
   .page-body__page-header {
