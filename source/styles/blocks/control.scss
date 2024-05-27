@@ -59,7 +59,7 @@
   gap: 14px;
 }
 
-.control-additionally {
+.control--additionally {
   gap: 15px;
 
   &:active {
@@ -80,10 +80,12 @@
 
   &:hover {
     outline: 2px solid $decoration-color-hover;
+    outline-offset: -2px;
   }
 
   &:focus-visible {
     outline: 2px solid $decoration-color-hover;
+    outline-offset: -2px;
   }
 
   &:disabled {
@@ -224,7 +226,7 @@
     min-height: 140px;
   }
 
-  .control-additionally {
+  .control--additionally {
     align-self: start;
     gap: 20px;
   }
