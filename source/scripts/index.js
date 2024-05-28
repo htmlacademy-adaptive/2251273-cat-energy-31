@@ -2,11 +2,13 @@
 // решение в лоб... научусь переделаю...
 const menuList = document.querySelector('.navigation__list');
 const menuButton = document.querySelector('.page-header__button');
+const map = document.querySelector('.map__frame');
 
 const pageWidth = document.documentElement.clientWidth;
 
 menuList.classList.remove('navigation__list--no-js');
 menuButton.classList.remove('page-header__button--no-js');
+map.classList.remove('map__frame--no-js');
 
 menuButton.addEventListener('click', () => {
   menuList.classList.toggle('navigation__list--closed');

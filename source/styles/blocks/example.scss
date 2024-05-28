@@ -135,45 +135,56 @@
   .example {
     display: grid;
     grid-template-columns: 1fr auto;
-    gap: 20px 230px;
+    gap: 0 230px;
     border: none;
   }
 
-  .example::after {
+  .example::before {
     content: "";
     grid-column: 1 / -1;
+    grid-row: 2 / 6;
     width: calc(100% + 220px);
-    height: 462px;
-    margin: -435px -110px 0;
+    min-height: 0;
+    margin: 0 -110px;
     background-color: $bg-color-primary;
+    z-index: 0;
+  }
+
+  .example::after {
+    display: none;
   }
 
   .example__heading {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
-    margin: 0 0 126px;
+    margin: 0 0 76px;
   }
 
   .example__text {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
-    margin: 0 0 50px;
+    margin: 70px 0 0;
     z-index: 1;
   }
 
   .example__list {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
     gap: 43px;
     width: 85%;
-    margin: 0 0 25px;
+    margin: 69px 0 0;
     z-index: 1;
   }
 
   .example__description {
+    grid-column: 1 / 2;
+    grid-row: 4 / 6;
+    place-self: flex-end start;
     display: flex;
-    justify-self: start;
     gap: 63px;
     z-index: 1;
-    padding: 5px 0 0;
+    margin: 50px 0 68px;
+    padding: 0;
   }
 
   .example__definition {
@@ -186,7 +197,7 @@
 
   .example__slider {
     grid-column: 2 / -1;
-    grid-row: 1 / 6;
+    grid-row: 1 / 5;
     margin: 0;
   }
 }

@@ -127,25 +127,25 @@
       <fieldset class="form__group group group--additionally">
         <legend class="group__name visually-hidden">Дополнительно</legend>
         <span class="group__title group__title--additionally">Дополнительно</span>
-        <label class="group__control control control-additionally" for="sweetener">
+        <label class="group__control control control--additionally" for="sweetener">
           <input class="visually-hidden control__input control__input--checkbox" type="checkbox" name="sweetener"
             id="sweetener" value="yes" checked aria-label="Добавить сахарозаменитель.">
           <span class="control__mark control__mark--checkbox"></span>
           <span class="control__name control__name--checkbox">Сахарозаменитель</span>
         </label>
-        <label class="group__control control control-additionally" for="water">
+        <label class="group__control control control--additionally" for="water">
           <input class="visually-hidden control__input control__input--checkbox" type="checkbox" name="water" id="water"
             value="yes" aria-label="Добавить питьевую воду.">
           <span class="control__mark control__mark--checkbox"></span>
           <span class="control__name control__name--checkbox">Питьевая вода</span>
         </label>
-        <label class="group__control control control-additionally" for="milk">
+        <label class="group__control control control--additionally" for="milk">
           <input class="visually-hidden control__input control__input--checkbox" type="checkbox" name="milk" id="milk"
             value="yes" aria-label="Добавить молоко.">
           <span class="control__mark control__mark--checkbox"></span>
           <span class="control__name control__name--checkbox">Молоко</span>
         </label>
-        <label class="group__control control control-additionally" for="vitamins">
+        <label class="group__control control control--additionally" for="vitamins">
           <input class="visually-hidden control__input control__input--checkbox" type="checkbox" name="vitamins"
             id="vitamins" value="yes" aria-label="Добавить витамины.">
           <span class="control__mark control__mark--checkbox"></span>
@@ -164,7 +164,9 @@
           <span  class="invite__text-city">Санкт-Петербург</span>
         </h3>
       </div>
-      <iframe  class="invite__map map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A7ec1721b10638175297fe8957aca91636dc435452fa67788eafcaea6af0fbddc&amp;source=constructor"></iframe>
+      <div class="invite__map map">
+        <iframe  class="map__frame map__frame--no-js" src="https://yandex.ru/map-widget/v1/?um=constructor%3A7ec1721b10638175297fe8957aca91636dc435452fa67788eafcaea6af0fbddc&amp;source=constructor"></iframe>
+      </div>
     </section>
   </main>
   <footer class="page-body__page-footer page-footer">
