@@ -137,7 +137,6 @@
     grid-template-columns: 1fr auto;
     gap: 0 230px;
     border: none;
-    // background-color: $bg-color-primary;
   }
 
   .example::before {
@@ -159,7 +158,6 @@
     grid-column: 1 / 2;
     grid-row: 1 / 2;
     margin: 0 0 76px;
-    // background-color: $bg-color-main;
   }
 
   .example__text {
@@ -182,9 +180,7 @@
     grid-column: 1 / 2;
     grid-row: 4 / 6;
     place-self: flex-end start;
-    // align-self: flex-end;
     display: flex;
-    // justify-self: start;
     gap: 63px;
     z-index: 1;
     margin: 50px 0 68px;

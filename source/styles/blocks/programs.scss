@@ -10,11 +10,8 @@
 .programs__item {
   position: relative;
   display: grid;
-  // align-items: center;
   gap: 22px 20px;
   grid-template-columns: auto 1fr;
-  // justify-content: start;
-  // align-items: start;
   padding: 24px 20px 12px;
   background-color: $bg-color-primary;
 }
@@ -85,7 +82,7 @@
   grid-column: 1 / -1;
   display: flex;
   align-items: center;
-  place-self: center start;
+  place-self: end start;
   gap: 18px;
   margin: 10px 0 0;
   padding: 10px 0;
@@ -129,8 +126,6 @@
     width: 200px;
     height: 200px;
     margin: 15px 0 38px;
-    //
-    // align-self: start;
   }
 
   .programs__item--cat-back::after {

@@ -85,9 +85,6 @@
   }
 
   .hero__button {
-    // position: absolute;
-    // left: 120px;
-    // top: 270px;
     grid-row: 2/3;
     justify-self: start;
     max-width: 400px;
@@ -124,9 +121,6 @@
 
   .hero__button {
     grid-column: 1 / 2;
-    // position: absolute;
-    // left: 190px;
-    // top: 287px;
     margin: 13px 0 198px 100px;
     letter-spacing: 0.1px;
   }
