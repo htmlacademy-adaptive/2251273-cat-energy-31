@@ -58,6 +58,8 @@
 
 @media (min-width: $desktop-width) {
   .catalog {
+    width: $desktop-width;
+    margin: 0 auto;
     padding: 10px 110px;
   }
 
