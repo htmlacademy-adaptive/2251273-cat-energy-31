@@ -119,6 +119,11 @@
     justify-content: center;
   }
 
+  .navigation__list {
+    width: calc($container-width / 2 + 15px);
+    margin-right: auto;
+  }
+
   .navigation__list--auxiliary {
     .navigation__link {
       color: $text-color-secondary;

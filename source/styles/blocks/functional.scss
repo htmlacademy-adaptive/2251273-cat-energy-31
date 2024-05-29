@@ -92,7 +92,7 @@
     color: $bg-color-primary;
     position: absolute;
     top: 0;
-    right: 80px;
+    left: 114px;
   }
 
   .functional__text {
@@ -126,6 +126,11 @@
 // desktop
 
 @media (min-width: $desktop-width) {
+  .functional {
+    width: $container-width;
+    margin: 0 auto;
+  }
+
   .functional__list {
     grid-template-columns: repeat(4, 1fr);
     gap: 40px 80px;
@@ -136,6 +141,6 @@
   }
 
   .functional__item::before {
-    right: 0;
+    left: 116px;
   }
 }

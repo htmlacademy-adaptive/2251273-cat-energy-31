@@ -179,6 +179,8 @@
   .programs__list {
     grid-template-columns: repeat(2, 1fr);
     gap: 40px 80px;
+    width: $container-width;
+    margin: 0 auto;
   }
 
   .programs__item {

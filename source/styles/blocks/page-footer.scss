@@ -1,6 +1,6 @@
 // page-footer
 
-.page-footer {
+.page-footer__wrapper {
   display: grid;
   grid-template-columns: 1fr;
 }
@@ -16,9 +16,11 @@
 // tablet
 
 @media (min-width: $tablet-width) {
-  .page-footer {
+  .page-footer__wrapper {
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
+    max-width: $container-width;
+    margin: 0 auto;
   }
 
   .page-footer__logo {
