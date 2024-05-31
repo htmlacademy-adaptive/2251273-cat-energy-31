@@ -35,6 +35,7 @@
   width: 60px;
   height: 60px;
   background-color: $bg-color-secondary;
+  align-self: start;
 }
 
 .functional__text--leaf::before {
@@ -92,7 +93,27 @@
     color: $bg-color-primary;
     position: absolute;
     top: 0;
-    right: 80px;
+    left: 114px;
+  }
+
+  .functional__item--one::before {
+    top: -3px;
+    left: 119px;
+  }
+
+  .functional__item--two::before {
+    top: -2px;
+    left: 112px;
+  }
+
+  .functional__item--three::before {
+    top: -2px;
+    left: 114px;
+  }
+
+  .functional__item--four::before {
+    top: -2px;
+    left: 114px;
   }
 
   .functional__text {
@@ -126,6 +147,11 @@
 // desktop
 
 @media (min-width: $desktop-width) {
+  .functional {
+    width: $container-width;
+    margin: 0 auto;
+  }
+
   .functional__list {
     grid-template-columns: repeat(4, 1fr);
     gap: 40px 80px;
@@ -136,6 +162,26 @@
   }
 
   .functional__item::before {
-    right: 0;
+    left: 116px;
+  }
+
+  .functional__item--one::before {
+    top: -3px;
+    left: 119px;
+  }
+
+  .functional__item--two::before {
+    top: -2px;
+    left: 112px;
+  }
+
+  .functional__item--three::before {
+    top: -2px;
+    left: 114px;
+  }
+
+  .functional__item--four::before {
+    top: -2px;
+    left: 114px;
   }
 }

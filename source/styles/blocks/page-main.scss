@@ -9,7 +9,7 @@
 }
 
 .page-main__example {
-  padding: 25px 20px 42px;
+  padding: 0;
 }
 
 .page-main__catalog {
@@ -62,7 +62,7 @@
   }
 
   .page-main__example {
-    padding: 45px 30px 0;
+    padding: 0;
   }
 
   .page-main__other {
@@ -93,23 +93,23 @@
 
 @media (min-width: $desktop-width) {
   .page-main__programs {
-    padding: 0 110px;
+    padding: 0;
   }
 
   .page-main__functional {
-    padding: 70px 110px 43px;
+    padding: 70px 0 43px;
   }
 
   .page-main__example {
-    padding: 23px 110px 0;
+    padding: 23px 0 0;
   }
 
   .page-main__other {
-    padding: 60px 110px 0;
+    padding: 60px 0 0;
   }
 
   .page-main__subscription {
-    padding: 97px 110px 25px;
+    padding: 96px 0 25px;
   }
 
   .page-main__heading {
