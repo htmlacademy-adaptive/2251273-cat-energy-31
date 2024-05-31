@@ -191,24 +191,37 @@
   .other {
     grid-template-columns: 110fr 30fr;
     gap: 0 80px;
+    width: $container-width;
+    margin: 0 auto;
   }
 
   .other__heading {
     @include font-family($font-family-primary, 400, 40px, 100%);
     grid-column: 1 / -1;
     gap: 40px;
-    margin: 0 -110px;
+    width: max-content;
+    margin: 0;
     padding: 0 0 80px;
+    background: $bg-color-main;
+    box-shadow:
+      -40px 0 0 0 $bg-color-main,
+      40px 0 0 0 $bg-color-main;
   }
 
   .other__heading::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100vw;
     top: 18px;
-    min-width: 70px;
+    right: 0;
+    z-index: -1;
+    background: $bg-color-secondary;
+    box-shadow: 100vw 0 0 0 $bg-color-secondary;
   }
 
   .other__heading::after {
-    top: 18px;
-    min-width: 70px;
+    display: none;
   }
 
   .other__item {

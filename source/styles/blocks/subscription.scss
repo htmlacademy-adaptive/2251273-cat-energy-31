@@ -74,20 +74,37 @@
 // desktop
 
 @media (min-width: $desktop-width) {
+  .subscription {
+    max-width: $container-width;
+    margin: 0 auto;
+  }
+
   .subscription__heading {
     @include font-family($font-family-primary, 400, 40px, 100%);
-    margin: 0 -110px;
-    padding: 0 0 70px;
+    position: relative;
+    margin: 0;
+    padding: 0 0 72px;
+    width: max-content;
+    background: $bg-color-main;
+    box-shadow:
+      -40px 0 0 0 $bg-color-main,
+      40px 0 0 0 $bg-color-main;
   }
 
   .subscription__heading::before {
-    top: 17px;
-    min-width: 70px;
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100vw;
+    top: 18px;
+    right: 0;
+    z-index: -1;
+    background: $bg-color-secondary;
+    box-shadow: 100vw 0 0 0 $bg-color-secondary;
   }
 
   .subscription__heading::after {
-    top: 17px;
-    min-width: 70px;
+    display: none;
   }
 
   .subscription__form {
